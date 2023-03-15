@@ -1,0 +1,11 @@
+<!--  The comments switcher -->
+{% if page.comments %}
+  {% include comments/disqus.html %}
+{% endif %}
+
+<!--  The comments switcher 
+  {% if page.comments and site.comments.active (if "true", sometimes doesn't work) %}
+  {% capture path %}comments/{{ site.comments.active }}.html{% endcapture %}
+  {% include {{ path }} %}
+  {% endif %}
+-->
