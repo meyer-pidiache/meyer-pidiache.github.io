@@ -1,5 +1,5 @@
 ---
-title: Low Battery - Parrot OS
+title: Low Battery - Mate
 author: meyer
 date: 2023-03-11 02:24:00 -0500
 categories: [Tutorial]
