@@ -16,6 +16,8 @@ tags: [linux, terminal, kitty]
 
 ### Plugins
 
+#### FZF
+
 ### NVIM
 
 #### NVCHAD
