@@ -12,7 +12,6 @@ baseurl: ''
 # otherwise, the layout language will use the default value of 'en'.
 lang: en
 
-
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: America/Bogota
 
@@ -186,7 +185,7 @@ exclude:
   - README.md
   - CHANGELOG.md
   - LICENSE
-  - gulpfile.js
+  - rollup.config.js
   - node_modules
   - package*.json
 
