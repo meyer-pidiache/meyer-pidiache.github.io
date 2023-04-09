@@ -8,11 +8,11 @@ tags: [linux, parrot, mate, customization]
 
 ## Introduction
 
-Do you have problems with low battery alerts? With this script you can create a custom low battery alert, with a few steps you can do it so, let's start.
+Having problems with low battery alerts? With this script you can create a custom low battery alert, with a few simple steps you can do it, so let's get started.
 
 ## Preview
 
-To see a preview of this custom alert excute:
+To see a preview of this custom alert, run:
 
 ```shell
 notify-send --urgency=critical \
@@ -20,7 +20,7 @@ notify-send --urgency=critical \
             "Low battery $(cat /sys/class/power_supply/BAT0/capacity)%."
 ```
 
-> Note that `--icon` use a default icon, you can replace it with a image path
+> Note that `--icon` uses a default icon, you can replace it by an image path
 {: .prompt-info }
 
 ## Create a custom alert
@@ -32,7 +32,7 @@ sudo touch /usr/local/bin/battery_monitor.sh &&
 sudo chmod +x /usr/local/bin/battery_monitor.sh
 ```
 
-Then, copy and paste the following script to `/usr/local/bin/battery_monitor.sh` and edit if necesary.
+Then copy and paste the following script into `/usr/local/bin/battery_monitor.sh` and edit it if necessary.
 
 ```shell
 #!/bin/bash
@@ -57,12 +57,12 @@ fi
 ```
 {: file='/usr/local/bin/battery_monitor.sh'}
 
-> Edit the script with the correct path to `~/.Xauthority`
+> Edit the script with the correct path to `~/.Xauthority`.
 {: .prompt-warning }
 
 ### Crontab
 
-Finally, add the path script to crontab
+Finally, add the script we created to crontab.
 
 ```shell
 crontab -e
@@ -76,7 +76,7 @@ Add this line at the end of the file:
 ```
 {: file='crontab -e'}
 
-This will check the battery level every minute, and if it's less than or equal to 20, the alert will be shown.
+This will check the battery level every minute, and if it's less than or equal to 20, the alert will be displayed.
 
-> In `*/1 * * * *`, the `*` symbols represent the different time intervals, with the order being `minute hour day-of-month month day-of-week`.
+> In `*/1 * * * * * *`, the symbols `*` represent the different time intervals, in the order `minute - hour - day of the month - month - day of the week`.
 {: .prompt-info }

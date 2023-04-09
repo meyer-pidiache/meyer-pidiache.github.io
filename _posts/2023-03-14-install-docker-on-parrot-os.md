@@ -17,8 +17,7 @@ Update the apt package index and install packages to allow apt to use a reposito
  sudo apt-get install \
     ca-certificates \
     curl \
-    gnupg \
-    lsb-release
+    gnupg
 ```
 
 ### Add Docker’s official GPG key:
@@ -36,7 +35,7 @@ Use the following command to set up the repository:
   buster stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-> Note that the official documentation recommend `$(lsb_release -sc)` (`ara` in some cases) instead of `buster`, but it generate an error
+> Note that the official documentation recommends `$(lsb_release -sc)` (`ara`) instead of `buster`, but generates an error.
 {: .prompt-warning }
 
 ### Install Docker Engine
