@@ -36,6 +36,9 @@ Use the following command to set up the repository:
   buster stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
+> Note that the official documentation recommend `$(lsb_release -sc)` (`ara` in some cases) instead of `buster`, but it generate an error
+{: .prompt-warning }
+
 ### Install Docker Engine
 
 Update the apt package index:
