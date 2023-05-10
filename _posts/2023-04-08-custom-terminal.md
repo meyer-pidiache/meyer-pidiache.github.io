@@ -10,7 +10,7 @@ tags: [linux, terminal, kitty]
 
 A user-friendly terminal can make your work easier and more pleasant. In this tutorial, we'll learn how to customize the look and feel of your Linux terminal by using the Kitty terminal emulator and ZSH shell with the Powerlevel10k theme. We'll also install some plugins and tools to improve productivity.
 
-#### Fonts
+## Fonts
 
 1. Download the HackNerdFont by clicking on this [link](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Hack.zip).
 
@@ -18,10 +18,10 @@ A user-friendly terminal can make your work easier and more pleasant. In this tu
 
     ```shell
     sudo mkdir /usr/share/fonts/HackNerdFont
-    unzip ~/Downloads/Hack.zip -d /usr/share/fonts/HackNerdFont
+    sudo unzip ~/Downloads/Hack.zip -d /usr/share/fonts/HackNerdFont
     ```
 
-### Kitty
+## Kitty
 
 Kitty is a modern, fast, and feature-rich terminal emulator that supports many advanced features, such as GPU rendering, ligatures, and true-color. You can download and install it from the [official website](https://sw.kovidgoyal.net/kitty/binary/){:target="\_blank"} or with your package manager.
 
@@ -99,7 +99,7 @@ Kitty is a modern, fast, and feature-rich terminal emulator that supports many a
 
 5. Save and close the configuration file.
 
-### ZSH
+## ZSH
 
 Zsh is a powerful shell that offers many advanced features and customization options. In this tutorial, we'll use Zsh as our default shell. Install Zsh with the following command:
 
@@ -122,9 +122,9 @@ echo 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 > This will clone the repo to `~/.powerlevel10k`
 > {: .prompt-info }
 
-### Plugins
+## Plugins
 
-Plugins are additional tools that can be added to the Zsh shell to provide additional features and improve productivity. Here are a few plugins that you may find useful. For this purpose we will use `locate` to find our plugins path installation
+Plugins are additional tools that can be added to the Zsh shell to provide additional features and improve productivity. Here are a few plugins that you may find useful. For this purpose we will use `locate` to find our plugins path installation and then add the path of the plugins to our `.zshrc`.
 
 ```shell
 sudo apt install locate -y
@@ -135,20 +135,20 @@ Let's proceed with the plugins
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md){:target="\_blank"}. This plugin provides syntax highlighting for the terminal. After installation, the terminal will highlight commands, arguments, and other syntax elements, making it easier to read and understand.
 ```shell
 sudo apt install zsh-syntax-highlighting -y
-echo "source $(locate zsh-syntax-highlighting.zsh)" > ~.zshrc
+echo "source $(locate zsh-syntax-highlighting.zsh)" > ~/.zshrc
 ```
 
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md){:target="\_blank"}. This plugin provides auto-completion suggestions as you type commands, based on your command history. This can save you a lot of time and typing.
 ```shell
 sudo apt install zsh-autosuggestions -y
-echo "source $(locate zsh-autosuggestions.zsh)" > ~.zshrc
+echo "source $(locate zsh-autosuggestions.zsh)" > ~/.zshrc
 ```
 
 - [sudo.plugin](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/sudo/sudo.plugin.zsh){:target="\_blank"}. This plugin adds aliases and functions for the sudo command, making it easier to use.
 ```shell
-mkdir -p /usr/share/zsh/plugins/zsh-sudo/
-wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh -P /usr/share/zsh/plugins/zsh-sudo/
-echo "source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh" > ~.zshrc
+sudo mkdir -p /usr/share/zsh/plugins/zsh-sudo/
+sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh -P /usr/share/zsh/plugins/zsh-sudo/
+echo "source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh" > ~/.zshrc
 ```
 
 ### Tools
@@ -167,6 +167,11 @@ echo "source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh" > ~.zshrc
     ~/.fzf/install
     ```
 
+- LSD (short for "LSDeluxe"). Is a modern replacement for the `ls` command in Unix-like operating systems. It aims to improve upon the traditional `ls` command by providing a more colorful and user-friendly output, as well as additional features such as icon glyphs, file grouping, and support for Unicode file names.  
+    ```shell
+    sudo apt install lsd -y
+    ```
+
 - [NVIM](https://github.com/neovim/neovim){:target="\_blank"}. Is a modern version of the popular text editor Vim. It includes many improvements and new features, including better performance and a more user-friendly interface.
     ```shell
     sudo apt install neovim -y
@@ -176,6 +181,8 @@ echo "source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh" > ~.zshrc
     ```shell
     git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
     ```
+    > To use more features you will need to have `npm` installed.
+    > {: .prompt-info }
 
 
 ### Alias
@@ -185,16 +192,31 @@ An alias is a way to create a shortcut for a command or a set of commands. If yo
 ```conf
 alias cat='bat'
 alias icat='kitty +kitten icat'
+alias vim='nvim'
+# ls
+alias l='lsd --group-dirs=first'
+alias la='lsd -a --group-dirs=first'
+alias ll='lsd -lh --group-dirs=first'
+alias lla='lsd -lha --group-dirs=first'
+alias ls='lsd --group-dirs=first'
 ```
 {: file='~/.zshrc'}
 
 This means that every time you type `cat` in the terminal, it will run the bat command instead. Similarly, when you type `icat`, it will open the image with kitty.
 
-After adding these lines, you need to reload your `~/.zshrc` file to apply the changes. You can do this by running the following command:
+## Last step
+
+Finally we can close our current terminal and then open our kitty and start customizing our command line, if you want to change the style later you can run:
 
 ```shell
-source ~/.zshrc
+p10k configure
 ```
 
-This command will reload your `~/.zshrc` file so that the new aliases are available in your terminal.
+If you want to play more in detail, simply edit the .p10k.zsh file.
 
+```conf
+vim ~/.p10k.zsh
+```
+{: file='~/.p10k.zsh'}
+
+That's it! Now we have a customizable zshell.
