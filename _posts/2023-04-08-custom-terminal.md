@@ -17,8 +17,8 @@ A user-friendly terminal can make your work easier and more pleasant. In this tu
 2. Unzip the downloaded file to your system fonts folder by running the following commands in the terminal:
 
     ```shell
-    sudo mkdir /usr/share/fonts/HackNerdFont
-    sudo unzip ~/Downloads/Hack.zip -d /usr/share/fonts/HackNerdFont
+sudo mkdir /usr/share/fonts/HackNerdFont
+sudo unzip ~/Downloads/Hack.zip -d /usr/share/fonts/HackNerdFont
     ```
 
 ## Kitty
@@ -28,76 +28,81 @@ Kitty is a modern, fast, and feature-rich terminal emulator that supports many a
 1. Update your package manager:
 
     ```shell
-    sudo apt update
+sudo apt update
     ```
 
 2. Install Kitty with the following command:
 
     ```shell
-    sudo apt install kitty -y
+sudo apt install kitty -y
+    ```
+3. Open Kitty terminal
+    ```shell
+kitty
     ```
 
-3. Create the Kitty configuration file:
+4. Create the Kitty configuration file:
 
     ```shell
-    touch ~/.config/kitty/kitty.conf
+touch ~/.config/kitty/kitty.conf
     ```
 
-4. Open the configuration file with your favorite text editor and add the following settings:
+5. Open the configuration file with your favorite text editor and add the following settings:
 
-    ```conf
-    # Disable bell
-    enable_audio_bell no
+```conf
+# Disable bell
+enable_audio_bell no
 
-    # Font
-    font_family HackNerdFont
-    font_size 12
-    url_color #61afef
+# Font
+font_family HackNerdFont
+font_size 12
+url_color #61afef
 
-    # Keyboard shortcuts
-    ## Move through windows
-    map ctrl+left neighboring_window left
-    map ctrl+right neighboring_window right
-    map ctrl+up neighboring_window up
-    map ctrl+down neighboring_window down
+# Keyboard shortcuts
+## Move through windows
+map ctrl+left neighboring_window left
+map ctrl+right neighboring_window right
+map ctrl+up neighboring_window up
+map ctrl+down neighboring_window down
 
-    ## Suspend work
-    map ctrl+shift+z toggle_layout stack
+## Suspend work
+map ctrl+shift+z toggle_layout stack
 
-    ## New window/tab
-    map ctrl+shift+enter new_window_with_cwd
-    map ctrl+shift+t new_tab_with_cwd
+## New window/tab
+map ctrl+shift+enter new_window_with_cwd
+map ctrl+shift+t new_tab_with_cwd
 
-    # Cursor
-    cursor_shape beam
-    cursor_beam_thickness 1.8
+# Cursor
+cursor_shape beam
+cursor_beam_thickness 1.8
 
-    # Mouse
-    mouse_hide_wait 3.0
-    detect_urls yes
+# Mouse
+mouse_hide_wait 3.0
+detect_urls yes
 
-    # Input
-    repaint_delay 10
-    input_delay 3
-    sync_to_monitor yes
+# Input
+repaint_delay 10
+input_delay 3
+sync_to_monitor yes
 
-    # Tabs
-    tab_bar_style powerline
-    inactive_tab_background #e06c75
-    active_tab_background #98c379
-    inactive_tab_foreground #000000
+# Tabs
+tab_bar_style powerline
+inactive_tab_background #e06c75
+active_tab_background #98c379
+inactive_tab_foreground #000000
 
-    # Window
-    background_opacity 0.95
-    window_padding_width 4
+# Window
+background_opacity 0.95
+window_padding_width 4
 
-    # Default shell
-    shell zsh
+# Default shell
+shell zsh
 
-    ```
-    {: file='~/.config/kitty/kitty.conf'}
+```
+{: file='~/.config/kitty/kitty.conf'}
 
-5. Save and close the configuration file.
+> Save and close the configuration file.
+> {: .prompt-info }
 
 ## ZSH
 
@@ -155,35 +160,36 @@ echo "source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh" > ~/.zshrc
 
 - [Batcat](https://github.com/sharkdp/bat#installation){:target="\_blank"}. Is a command-line utility that provides syntax highlighting and other features when viewing files. It can be used instead of the standard `cat` command to improve readability of files in the terminal.
     ```shell
-    sudo apt install bat -y
-    mkdir -p ~/.local/bin
-    ln -s /usr/bin/batcat ~/.local/bin/bat
+sudo apt install bat -y
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
     ```
 
 - [FZF](https://github.com/junegunn/fzf#installation){:target="\_blank"}. Is a command-line fuzzy finder that can be used to quickly search through files, command history, and other sources. It can also be used to select files and directories for use in other commands.
 
     ```shell
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
     ```
 
 - LSD (short for "LSDeluxe"). Is a modern replacement for the `ls` command in Unix-like operating systems. It aims to improve upon the traditional `ls` command by providing a more colorful and user-friendly output, as well as additional features such as icon glyphs, file grouping, and support for Unicode file names.  
     ```shell
-    sudo apt install lsd -y
+sudo apt install lsd -y
     ```
 
 - [NVIM](https://github.com/neovim/neovim){:target="\_blank"}. Is a modern version of the popular text editor Vim. It includes many improvements and new features, including better performance and a more user-friendly interface.
     ```shell
-    sudo apt install neovim -y
+sudo apt install neovim -y
     ```
 
 - [NvChad](https://nvchad.com/docs/quickstart/install){:target="\_blank"}. Is a configuration framework for NVIM that includes a wide range of plugins and settings to make NVIM even more powerful and customizable. It includes features such as auto-completion, syntax highlighting, and code linting, among others.
-    ```shell
-    git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
-    ```
+
     > To use more features you will need to have `npm` installed.
     > {: .prompt-info }
 
+    ```shell
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+    ```
 
 ### Alias
 
