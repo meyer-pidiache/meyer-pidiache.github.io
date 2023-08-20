@@ -1,9 +1,9 @@
 ---
-title: Mate - Low Battery Custom Alert
+title: Low Battery Custom Alert (notify-send)
 author: meyer
 date: 2023-03-11 02:24:00 -0500
 categories: [Tutorial]
-tags: [linux, parrot, mate, customization]
+tags: [linux, customization]
 ---
 
 ## Introduction
@@ -28,7 +28,7 @@ notify-send --urgency=critical \
 First we need to create a bash script
 
 ```shell
-sudo touch /usr/local/bin/battery_monitor.sh && 
+sudo touch /usr/local/bin/battery_monitor.sh &&
 sudo chmod +x /usr/local/bin/battery_monitor.sh
 ```
 
