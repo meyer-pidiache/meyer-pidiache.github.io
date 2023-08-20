@@ -12,13 +12,14 @@ A user-friendly terminal can make your work easier and more pleasant. In this tu
 
 ## Fonts
 
-1. Download the HackNerdFont by clicking on this [link](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Hack.zip).
+1. Download the HackNerdFont by clicking on this [link](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip).
 
 2. Unzip the downloaded file to your system fonts folder by running the following commands in the terminal:
 
     ```shell
 sudo mkdir /usr/share/fonts/HackNerdFont
 sudo unzip ~/Downloads/Hack.zip -d /usr/share/fonts/HackNerdFont
+rm ~/Downloads/Hack.zip
     ```
 
 ## Kitty
@@ -172,7 +173,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
     ```
 
-- LSD (short for "LSDeluxe"). Is a modern replacement for the `ls` command in Unix-like operating systems. It aims to improve upon the traditional `ls` command by providing a more colorful and user-friendly output, as well as additional features such as icon glyphs, file grouping, and support for Unicode file names.  
+- LSD (short for "LSDeluxe"). Is a modern replacement for the `ls` command in Unix-like operating systems. It aims to improve upon the traditional `ls` command by providing a more colorful and user-friendly output, as well as additional features such as icon glyphs, file grouping, and support for Unicode file names.
     ```shell
 sudo apt install lsd -y
     ```
