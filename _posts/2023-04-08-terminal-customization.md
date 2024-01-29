@@ -1,52 +1,28 @@
 ---
-title: Terminal customization
+title: Personalización de la Terminal en Parrot Security 6.0 
 author: meyer
 date: 2023-04-08 20:04:00 -0500
 categories: [Tutorial]
-tags: [linux, terminal, kitty]
+tags: [linux, terminal, kitty, parrrot, personalización, zsh, debian]
+pin: true
 ---
 
-![Kitty](/assets/img/terminal.png)
+En este artículo veremos cómo personalizar una terminal en linux, específicamente en aquellas distribuciones basadas en Debian como Parrot Security 6.0. Sin tanto preámbulo, empecemos.
 
-A user-friendly terminal can make your work easier and more pleasant. In this tutorial, we'll learn how to customize the look and feel of your Linux terminal by using the Kitty terminal emulator and ZSH shell with the Powerlevel10k theme. We'll also install some plugins and tools to improve productivity.
+## Instalación y Configuración de Kitty
 
-## Fonts
+La terminal que voy a usar es [Kitty](https://sw.kovidgoyal.net/kitty/binary/){:target="\_blank"}, la cual tiene muchas opciones que nos permitirá personalizarla a nuestro gusto. Para instalarla lo podemos hacer mediante `apt`.
 
-1. Download the HackNerdFont by clicking on this [link](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip).
-
-2. Unzip the downloaded file to your system fonts folder by running the following commands in the terminal:
-
-    ```shell
-sudo mkdir /usr/share/fonts/HackNerdFont
-sudo unzip ~/Downloads/Hack.zip -d /usr/share/fonts/HackNerdFont
-rm ~/Downloads/Hack.zip
-    ```
-
-## Kitty
-
-Kitty is a modern, fast, and feature-rich terminal emulator that supports many advanced features, such as GPU rendering, ligatures, and true-color. You can download and install it from the [official website](https://sw.kovidgoyal.net/kitty/binary/){:target="\_blank"} or with your package manager.
-
-1. Update your package manager:
-
-    ```shell
+```shell
 sudo apt update
-    ```
-
-2. Install Kitty with the following command:
-
-    ```shell
 sudo apt install kitty -y
-    ```
-3. Open Kitty terminal
-    ```shell
-kitty
-    ```
+```
 
-4. Create the Kitty configuration file:
+Con la terminal instalada, ahora podemos configurar algunos detalles de la misma, para mayor información se puede revisar la [documentación](https://sw.kovidgoyal.net/kitty/conf/){:target="\_blank"}. Lo que primero haremos ahora es crear el archivo de configuración.
 
-    ```shell
+```shell
 touch ~/.config/kitty/kitty.conf
-    ```
+```
 
 5. Open the configuration file with your favorite text editor and add the following settings:
 
@@ -111,6 +87,36 @@ Zsh is a powerful shell that offers many advanced features and customization opt
 
 ```shell
 sudo apt install zsh -y
+```
+
+### Tipografía como Requisito
+
+Para poder tener una compatibilidad completa con Powerlevel10K necesitamos un tipo de letra monoespaciado, en este caso usaremos el recomendado en [repositorio](https://github.com/romkatv/powerlevel10k#fonts){:target="\_blank"} de esta utilidad. Puede descargar los archivos ttf desde los siguientes enlaces o revisar el repositorio indicado.
+
+   - [MesloLGS NF Regular.ttf](
+       https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf)
+   - [MesloLGS NF Bold.ttf](
+       https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf)
+   - [MesloLGS NF Italic.ttf](
+       https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf)
+   - [MesloLGS NF Bold Italic.ttf](
+       https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
+
+
+Ahora que tenemos descargada la fuente, procedemos a instalarla. Una forma sencilla es dar doble click sobre cada archivo y luego seleccionar instalar, pero si queremos complicarnos la vida, podemos hacer lo siguiente.
+
+Creamos un directorio en `/usr/share/fonts/truetype` para almacenar nuestra nueva _TrueType Font_ (TTF) y procedemos a mover los archivos a esta carpeta.
+
+```shell
+sudo mkdir /usr/share/fonts/truetype/meslo-nerd-font
+sudo mv ~/Downloads/MesloLGS* /usr/share/fonts/truetype/meslo-nerd-font/
+```
+
+Ahora necesitamos actualizar con `fc-cache` nuestra caché de fuentes, le damos los argumentos de `-f` y `-v` para forzar la actualización y ver más a detalle la ejecución. Finalmente con `fc-list` nos aseguramos de que se ha instalado correctamente nuestra fuente.
+
+```shell
+sudo fc-cache -f -v
+fc-list | grep "meslo"
 ```
 
 ### PowerLevel10K
