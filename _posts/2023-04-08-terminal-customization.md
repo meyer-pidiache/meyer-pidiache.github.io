@@ -9,87 +9,9 @@ pin: true
 
 En este artículo veremos cómo personalizar una terminal en linux, específicamente en aquellas distribuciones basadas en Debian como Parrot Security 6.0. Sin tanto preámbulo, empecemos.
 
-## Instalación y Configuración de Kitty
+## Tipografía como requisito
 
-La terminal que voy a usar es [Kitty](https://sw.kovidgoyal.net/kitty/binary/){:target="\_blank"}, la cual tiene muchas opciones que nos permitirá personalizarla a nuestro gusto. Para instalarla lo podemos hacer mediante `apt`.
-
-```shell
-sudo apt update
-sudo apt install kitty -y
-```
-
-Con la terminal instalada, ahora podemos configurar algunos detalles de la misma, para mayor información se puede revisar la [documentación](https://sw.kovidgoyal.net/kitty/conf/){:target="\_blank"}. Lo que primero haremos ahora es crear el archivo de configuración.
-
-```shell
-touch ~/.config/kitty/kitty.conf
-```
-
-5. Open the configuration file with your favorite text editor and add the following settings:
-
-```conf
-# Disable bell
-enable_audio_bell no
-
-# Font
-font_family HackNerdFont
-font_size 12
-url_color #61afef
-
-# Keyboard shortcuts
-## Move through windows
-map ctrl+left neighboring_window left
-map ctrl+right neighboring_window right
-map ctrl+up neighboring_window up
-map ctrl+down neighboring_window down
-
-## Suspend work
-map ctrl+shift+z toggle_layout stack
-
-## New window/tab
-map ctrl+shift+enter new_window_with_cwd
-map ctrl+shift+t new_tab_with_cwd
-
-# Cursor
-cursor_shape beam
-cursor_beam_thickness 1.8
-
-# Mouse
-mouse_hide_wait 3.0
-detect_urls yes
-
-# Input
-repaint_delay 10
-input_delay 3
-sync_to_monitor yes
-
-# Tabs
-tab_bar_style powerline
-inactive_tab_background #e06c75
-active_tab_background #98c379
-inactive_tab_foreground #000000
-
-# Window
-background_opacity 0.95
-window_padding_width 4
-
-# Default shell
-shell zsh
-
-```
-{: file='~/.config/kitty/kitty.conf'}
-
-> Save and close the configuration file.
-> {: .prompt-info }
-
-## ZSH
-
-Zsh is a powerful shell that offers many advanced features and customization options. In this tutorial, we'll use Zsh as our default shell. Install Zsh with the following command:
-
-```shell
-sudo apt install zsh -y
-```
-
-### Tipografía como Requisito
+### Descarga
 
 Para poder tener una compatibilidad completa con Powerlevel10K necesitamos un tipo de letra monoespaciado, en este caso usaremos el recomendado en [repositorio](https://github.com/romkatv/powerlevel10k#fonts){:target="\_blank"} de esta utilidad. Puede descargar los archivos ttf desde los siguientes enlaces o revisar el repositorio indicado.
 
@@ -102,6 +24,7 @@ Para poder tener una compatibilidad completa con Powerlevel10K necesitamos un ti
    - [MesloLGS NF Bold Italic.ttf](
        https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
 
+### Instalación
 
 Ahora que tenemos descargada la fuente, procedemos a instalarla. Una forma sencilla es dar doble click sobre cada archivo y luego seleccionar instalar, pero si queremos complicarnos la vida, podemos hacer lo siguiente.
 
@@ -119,12 +42,110 @@ sudo fc-cache -f -v
 fc-list | grep "meslo"
 ```
 
+## _Zsh_ como nuestra nueva _shell_
+
+### Instalación
+
+Para poder personalizar al máximo nuestra terminal, dejaremos de usar nuestra _bash_ tradicional para pasarnos a _zsh_, por consiguiente necesitaremos instalarla.
+
+```shell
+sudo apt update
+sudo apt install zsh
+```
+
+### Configuración
+
+Para tener un historial de nuestros comandos ejecutados, crearemos estos archivos de configuración para nuestra nueva _shell_.
+```shell
+touch ~/.zshrc ~/.zsh_history
+```
+
+Ahora agregaremos las configuraciones que deseamos a este archivo.
+
+```conf
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.zsh_history
+```
+{: file='~/.zshrc'}
+
+## Kitty como nueva terminal
+
+### Instalación
+
+La terminal que voy a usar es [Kitty](https://sw.kovidgoyal.net/kitty/binary/){:target="\_blank"}, la cual tiene muchas opciones que nos permitirá personalizarla a nuestro gusto. Para instalarla lo podemos hacer mediante `apt`.
+
+```shell
+sudo apt install kitty
+```
+
+### Configuración
+
+Con la terminal instalada, ahora podemos configurar algunos detalles de la misma, para mayor información se puede revisar la [documentación](https://sw.kovidgoyal.net/kitty/conf/){:target="\_blank"}. Lo que primero haremos ahora es crear el archivo de configuración.
+
+```shell
+touch ~/.config/kitty/kitty.conf
+```
+
+Con el archivo ya creado, lo que tendremos que hacer ahora es editarlo con las configuraciones que deseemos, a continuación dejo un ejemplo detallado.
+
+```conf
+# Deshabilitamos el sonidito de la campana
+enable_audio_bell no
+
+# Establecemos la tipografía que vamos a usar
+font_family MesloLGS NF Regular
+font_size 12
+url_color #61afef
+
+# Personalizamos los atajos del teclado
+## Movimientos entre ventanas (ctr + alguna flechita)
+map ctrl+left neighboring_window left
+map ctrl+right neighboring_window right
+map ctrl+up neighboring_window up
+map ctrl+down neighboring_window down
+
+## Suspender trabajo
+map ctrl+shift+z toggle_layout stack
+
+## Crear una nueva ventana o pestaña con el directorio actual
+map ctrl+shift+enter new_window_with_cwd
+map ctrl+shift+t new_tab_with_cwd
+
+# Estilo del cursor
+cursor_shape beam
+cursor_beam_thickness 1.8
+
+# Comportamiento del ratón
+mouse_hide_wait 3.0
+detect_urls yes
+
+# Entrada por teclado
+repaint_delay 10
+input_delay 3
+sync_to_monitor yes
+
+# Estilo de las pestañas
+tab_bar_style powerline
+inactive_tab_background #e06c75
+active_tab_background #98c379
+inactive_tab_foreground #000000
+
+# Estilo de la terminal
+background_opacity 0.95
+window_padding_width 4
+
+# Nuestra shell por defecto
+shell zsh
+```
+{: file='~/.config/kitty/kitty.conf'}
+
 ### PowerLevel10K
 
-[Powerlevel10k](https://github.com/romkatv/powerlevel10k#installation){:target="\_blank"} is a highly customizable Zsh theme that provides a beautiful and informative prompt. We'll install it to enhance the look and feel of our terminal.
+Ahora que tenemos nuestra nueva _shell_ y la fuente requerida, procedemos y abrimos nuestra nueva terminal (kitty) para instalar [Powerlevel10k](https://github.com/romkatv/powerlevel10k#installation){:target="\_blank"}.
 
 ![PowerLevel10K](https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/prompt-styles-high-contrast.png){: width="972" height="589" }
-_PowerLevel10K makes zsh better_
+_Fuente: [github.com/romkatv/powerlevel10k](https://github.com/romkatv/powerlevel10k)_
 
 ```shell
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10k
