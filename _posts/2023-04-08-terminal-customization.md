@@ -79,6 +79,9 @@ La terminal que voy a usar es [Kitty](https://sw.kovidgoyal.net/kitty/binary/){:
 sudo apt install kitty
 ```
 
+> Por el momento no vamos abrir esta nueva terminal.
+> {: .prompt-info }
+
 ### Configuración
 
 Con la terminal instalada, ahora podemos configurar algunos detalles de la misma, para mayor información se puede revisar la [documentación](https://sw.kovidgoyal.net/kitty/conf/){:target="\_blank"}. Lo que primero haremos ahora es crear el archivo de configuración.
@@ -134,15 +137,16 @@ inactive_tab_foreground #000000
 # Estilo de la terminal
 background_opacity 0.95
 window_padding_width 4
+hide_window_decorations yes # Quitamos los bordes
 
 # Nuestra shell por defecto
 shell zsh
 ```
 {: file='~/.config/kitty/kitty.conf'}
 
-### PowerLevel10K
+### Instalación de PowerLevel10K
 
-Ahora que tenemos nuestra nueva _shell_ y la fuente requerida, procedemos y abrimos nuestra nueva terminal (kitty) para instalar [Powerlevel10k](https://github.com/romkatv/powerlevel10k#installation){:target="\_blank"}.
+Ahora que tenemos nuestra nueva _shell_ y la fuente requerida, procedemos a instalar [Powerlevel10k](https://github.com/romkatv/powerlevel10k#installation){:target="\_blank"}.
 
 ![PowerLevel10K](https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/prompt-styles-high-contrast.png){: width="972" height="589" }
 _Fuente: [github.com/romkatv/powerlevel10k](https://github.com/romkatv/powerlevel10k)_
@@ -152,39 +156,54 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10
 echo 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 ```
 
-> This will clone the repo to `~/.powerlevel10k`
+> La ubicación del repositorio estará en `~/.powerlevel10k`
 > {: .prompt-info }
 
-## Plugins
+## Extensiones
 
-Plugins are additional tools that can be added to the Zsh shell to provide additional features and improve productivity. Here are a few plugins that you may find useful. For this purpose we will use `locate` to find our plugins path installation and then add the path of the plugins to our `.zshrc`.
+### Instalación
 
+Para tener más funcionalidades, podemos instalar las siguientes extensiones (_plugins_) que nos darán un toque especial a nuestra zsh.
+
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md){:target="\_blank"}. Los colores le dan vida a una terminal, y esta extensión hará su trabajo.
 ```shell
-sudo apt install locate -y
+sudo apt install zsh-syntax-highlighting
 ```
 
-Let's proceed with the plugins
-
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md){:target="\_blank"}. This plugin provides syntax highlighting for the terminal. After installation, the terminal will highlight commands, arguments, and other syntax elements, making it easier to read and understand.
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md){:target="\_blank"}. Si usamos comandos muy largos, podemos ahorrar tiempo con esta extensión.
 ```shell
-sudo apt install zsh-syntax-highlighting -y
-echo "source $(locate zsh-syntax-highlighting.zsh)" > ~/.zshrc
+sudo apt install zsh-autosuggestions
 ```
 
-- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md){:target="\_blank"}. This plugin provides auto-completion suggestions as you type commands, based on your command history. This can save you a lot of time and typing.
-```shell
-sudo apt install zsh-autosuggestions -y
-echo "source $(locate zsh-autosuggestions.zsh)" > ~/.zshrc
-```
-
-- [sudo.plugin](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/sudo/sudo.plugin.zsh){:target="\_blank"}. This plugin adds aliases and functions for the sudo command, making it easier to use.
+- [sudo.plugin](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/sudo/sudo.plugin.zsh){:target="\_blank"}. Si queremos ejecutar un comando con sudo, solo tendremos que presionar doble vez la tecla de escape.
 ```shell
 sudo mkdir -p /usr/share/zsh/plugins/zsh-sudo/
 sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh -P /usr/share/zsh/plugins/zsh-sudo/
-echo "source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh" > ~/.zshrc
 ```
 
-### Tools
+### Configuración
+
+Ahora estas extensiones ya están en nuestro sistema, pero tenemos que enlazarlas con nuestra zsh, para ello necesitamos conocer la ubicación donde están alojadas, en el caso de Parrot las reubicaremos para una mejor organización.
+
+> Debemos asegurarnos de la existencia del directorio `/usr/share/zsh/plugins/` para continuar.
+> {: .prompt-warning }
+
+```bash
+sudo mv /usr/share/zsh-* /usr/share/zsh/plugins/
+```
+
+Con lo anterior hecho, agregaremos las ubicaciones de las extensiones a nuestro arhivo de configuración de la zsh.
+
+```conf
+[...]
+source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins//zsh-syntax-highlighting.zsh
+[...]
+```
+{: file='~/.zshrc'}
+
+### Herramientas
 
 - [Batcat](https://github.com/sharkdp/bat#installation){:target="\_blank"}. Is a command-line utility that provides syntax highlighting and other features when viewing files. It can be used instead of the standard `cat` command to improve readability of files in the terminal.
     ```shell
@@ -219,7 +238,7 @@ sudo apt install neovim -y
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
     ```
 
-### Alias
+### Configuración de atajos (Alias)
 
 An alias is a way to create a shortcut for a command or a set of commands. If you want to use bat instead of `cat` to display text files and want to use `icat` with kitty as the default image viewer, you can set aliases in your `~/.zshrc` file:
 
