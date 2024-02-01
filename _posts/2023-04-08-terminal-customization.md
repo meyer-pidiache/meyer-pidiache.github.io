@@ -144,7 +144,9 @@ shell zsh
 ```
 {: file='~/.config/kitty/kitty.conf'}
 
-### Instalación de PowerLevel10K
+## PowerLevel10K
+
+### Instalación
 
 Ahora que tenemos nuestra nueva _shell_ y la fuente requerida, procedemos a instalar [Powerlevel10k](https://github.com/romkatv/powerlevel10k#installation){:target="\_blank"}.
 
@@ -153,11 +155,35 @@ _Fuente: [github.com/romkatv/powerlevel10k](https://github.com/romkatv/powerleve
 
 ```shell
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10k
-echo 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 ```
 
 > La ubicación del repositorio estará en `~/.powerlevel10k`
 > {: .prompt-info }
+
+### Configuración
+
+Para este caso, ya tengo predefinidas algunas [configuraciones](https://github.com/meyer-pidiache/dotfiles/blob/main/.p10k.zsh){:target="\_blank"} estéticas para nuestra nueva shell, para establecerlas necesitaremos descargar un archivo.
+
+```bash
+wget https://raw.githubusercontent.com/meyer-pidiache/dotfiles/main/.p10k.zsh -O ~/.p10k.zsh
+```
+
+Ahora debemos modificar el archivo de configuración de nuestra _zsh_.
+
+```conf
+# Esta parte debe estar en el inicio del archivo
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# [...]
+
+# Enlazamos nuestra Powerlevel10k al final
+source ~/.powerlevel10k/powerlevel10k.zsh-theme
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+```
+{: file='~/.zshrc'}
 
 ## Extensiones
 
@@ -195,34 +221,35 @@ sudo mv /usr/share/zsh-* /usr/share/zsh/plugins/
 Con lo anterior hecho, agregaremos las ubicaciones de las extensiones a nuestro arhivo de configuración de la zsh.
 
 ```conf
-[...]
+# [...]
+
 source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins//zsh-syntax-highlighting.zsh
-[...]
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# [...]
 ```
 {: file='~/.zshrc'}
 
-### Herramientas
+## Herramientas
 
-- [Batcat](https://github.com/sharkdp/bat#installation){:target="\_blank"}. Is a command-line utility that provides syntax highlighting and other features when viewing files. It can be used instead of the standard `cat` command to improve readability of files in the terminal.
-    ```shell
-sudo apt install bat -y
-mkdir -p ~/.local/bin
-ln -s /usr/bin/batcat ~/.local/bin/bat
-    ```
+Si no nos parece suficiente con las extensiones y queremos más, podemos instalar herramientas que nos serán de gran utilidad.
+### Instalación
+- [Batcat](https://github.com/sharkdp/bat#installation){:target="\_blank"} 
+Este programa nos permite visualizar archivos de manera más amigable, es un reemplazo mejorado de `cat`.
+```shell
+sudo apt install bat
+```
 
-- [FZF](https://github.com/junegunn/fzf#installation){:target="\_blank"}. Is a command-line fuzzy finder that can be used to quickly search through files, command history, and other sources. It can also be used to select files and directories for use in other commands.
-
-    ```shell
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
-    ```
+- [FZF](https://github.com/junegunn/fzf#installation){:target="\_blank"}. Nos permite buscar archivos y nuestro historial de una mejor manera.
+```shell
+sudo apt install fzf
+```
 
 - LSD (short for "LSDeluxe"). Is a modern replacement for the `ls` command in Unix-like operating systems. It aims to improve upon the traditional `ls` command by providing a more colorful and user-friendly output, as well as additional features such as icon glyphs, file grouping, and support for Unicode file names.
-    ```shell
+```shell
 sudo apt install lsd -y
-    ```
+```
 
 - [NVIM](https://github.com/neovim/neovim){:target="\_blank"}. Is a modern version of the popular text editor Vim. It includes many improvements and new features, including better performance and a more user-friendly interface.
     ```shell
@@ -238,11 +265,13 @@ sudo apt install neovim -y
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
     ```
 
-### Configuración de atajos (Alias)
+### Configuración
 
 An alias is a way to create a shortcut for a command or a set of commands. If you want to use bat instead of `cat` to display text files and want to use `icat` with kitty as the default image viewer, you can set aliases in your `~/.zshrc` file:
 
 ```conf
+# [...]
+
 alias cat='bat'
 alias icat='kitty +kitten icat'
 alias vim='nvim'
@@ -252,6 +281,12 @@ alias la='lsd -a --group-dirs=first'
 alias ll='lsd -lh --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
+
+# FZF
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
+
+# [...]
 ```
 {: file='~/.zshrc'}
 
