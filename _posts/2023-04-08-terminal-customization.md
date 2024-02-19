@@ -8,21 +8,23 @@ pin: true
 ---
 
 En este artículo veremos cómo personalizar una terminal en linux, específicamente en aquellas distribuciones basadas en Debian como Parrot Security 6.0. Sin tanto preámbulo, empecemos.
+> Cualquier error que presente, lo puede dejar en la sección de comentarios.
+{: .prompt-warning }
+
+![Kitty](/assets/img/kitty.png)
 
 ## Tipografía como requisito
 
 ### Descarga
 
-Para poder tener una compatibilidad completa con Powerlevel10K necesitamos un tipo de letra monoespaciado, en este caso usaremos el recomendado en [repositorio](https://github.com/romkatv/powerlevel10k#fonts){:target="\_blank"} de esta utilidad. Puede descargar los archivos ttf desde los siguientes enlaces o revisar el repositorio indicado.
+Para poder tener una compatibilidad completa con Powerlevel10K necesitamos un tipo de letra monoespaciado, en este caso usaremos la última versión de Hack Nerd Font.
 
-   - [MesloLGS NF Regular.ttf](
-       https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf)
-   - [MesloLGS NF Bold.ttf](
-       https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf)
-   - [MesloLGS NF Italic.ttf](
-       https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf)
-   - [MesloLGS NF Bold Italic.ttf](
-       https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
+```
+curl -LO https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip
+mkdir hack-nerd-font
+unzip Hack.zip -d hack-nerd-font
+rm Hack.zip
+```
 
 ### Instalación
 
@@ -31,8 +33,7 @@ Ahora que tenemos descargada la fuente, procedemos a instalarla. Una forma senci
 Creamos un directorio en `/usr/share/fonts/truetype` para almacenar nuestra nueva _TrueType Font_ (TTF) y procedemos a mover los archivos a esta carpeta.
 
 ```shell
-sudo mkdir /usr/share/fonts/truetype/meslo-nerd-font
-sudo mv ~/Downloads/MesloLGS* /usr/share/fonts/truetype/meslo-nerd-font/
+sudo mv hack-nerd-font/ /usr/share/fonts/truetype/
 ```
 
 Ahora necesitamos actualizar con `fc-cache` nuestra caché de fuentes, le damos los argumentos de `-f` y `-v` para forzar la actualización y ver más a detalle la ejecución. Finalmente con `fc-list` nos aseguramos de que se ha instalado correctamente nuestra fuente.
@@ -80,7 +81,7 @@ sudo apt install kitty
 ```
 
 > Por el momento no vamos abrir esta nueva terminal.
-> {: .prompt-info }
+{: .prompt-info }
 
 ### Configuración
 
@@ -98,7 +99,7 @@ enable_audio_bell no
 
 # Establecemos la tipografía que vamos a usar
 font_family MesloLGS NF Regular
-font_size 12
+font_size 14
 url_color #61afef
 
 # Personalizamos los atajos del teclado
@@ -135,9 +136,8 @@ active_tab_background #98c379
 inactive_tab_foreground #000000
 
 # Estilo de la terminal
-background_opacity 0.95
+background_opacity 0.85
 window_padding_width 4
-hide_window_decorations yes # Quitamos los bordes
 
 # Nuestra shell por defecto
 shell zsh
@@ -241,46 +241,93 @@ Este programa nos permite visualizar archivos de manera más amigable, es un ree
 sudo apt install bat
 ```
 
-- [FZF](https://github.com/junegunn/fzf#installation){:target="\_blank"}. Nos permite buscar archivos y nuestro historial de una mejor manera.
+- [FZF](https://github.com/junegunn/fzf#installation){:target="\_blank"}. Nos permite buscar archivos y nuestro historial de una manera más dinámica.
 ```shell
 sudo apt install fzf
 ```
 
-- LSD (short for "LSDeluxe"). Is a modern replacement for the `ls` command in Unix-like operating systems. It aims to improve upon the traditional `ls` command by providing a more colorful and user-friendly output, as well as additional features such as icon glyphs, file grouping, and support for Unicode file names.
+- [LSD](https://github.com/lsd-rs/lsd). Es la versión mejorada de `ls`.
 ```shell
-sudo apt install lsd -y
+sudo apt install lsd
 ```
 
-- [NVIM](https://github.com/neovim/neovim){:target="\_blank"}. Is a modern version of the popular text editor Vim. It includes many improvements and new features, including better performance and a more user-friendly interface.
-    ```shell
-sudo apt install neovim -y
-    ```
+- [NVIM](https://github.com/neovim/neovim){:target="\_blank"}. Es la versión mejorada de `vim`, y para usarla en conjunto con NvChad, necesitamos la versión 0.9.4 o superior. A continuación descargamos la última versión y la instalamos.
+```shell
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
+rm nvim-linux64.tar.gz
+```
 
-- [NvChad](https://nvchad.com/docs/quickstart/install){:target="\_blank"}. Is a configuration framework for NVIM that includes a wide range of plugins and settings to make NVIM even more powerful and customizable. It includes features such as auto-completion, syntax highlighting, and code linting, among others.
-
-    > To use more features you will need to have `npm` installed.
-    > {: .prompt-info }
-
-    ```shell
+- [NvChad](https://nvchad.com/docs/quickstart/install){:target="\_blank"}. Nos brinda una configuración para `nvim` que es alucinante.
+```shell
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
-    ```
+```
+Al primer mensaje que nos aparece, seleccionamos "y" para la configuración por defecto.
+> Para instalar plugins adicionales, asegurémonos de tener `npm` instalado.
+> {: .prompt-info }
 
 ### Configuración
 
-An alias is a way to create a shortcut for a command or a set of commands. If you want to use bat instead of `cat` to display text files and want to use `icat` with kitty as the default image viewer, you can set aliases in your `~/.zshrc` file:
+Ahora que tenemos nuevas herramientas, configurémoslas y creemos algunos alias.
 
 ```conf
 # [...]
+export PATH="$PATH:/opt/nvim-linux64/bin"
 
-alias cat='bat'
-alias icat='kitty +kitten icat'
+alias cat='batcat'
+alias icat='kitty +kitten icat' # Para mostrar imágenes por consola
 alias vim='nvim'
-# ls
+# lsd
 alias l='lsd --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
 alias ll='lsd -lh --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
+
+function search(){
+	if [ "$1" = "h" ]; then
+
+		fzf -m --reverse --preview-window down:20 --preview '[[ $(file --mime {}) =~ binary ]] &&
+
+ 	                echo {} is a binary file ||
+
+	                 (batcat --style=numbers --color=always {} ||
+
+	                  highlight -O ansi -l {} ||
+
+	                  coderay {} ||
+
+	                  rougify {} ||
+
+	                  cat {}) 2> /dev/null | head -500'
+
+	else
+
+	        fzf -m --preview '[[ $(file --mime {}) =~ binary ]] &&
+
+	                         echo {} is a binary file ||
+
+	                         (batcat --style=numbers --color=always {} ||
+
+	                          highlight -O ansi -l {} ||
+
+	                          coderay {} ||
+
+	                          rougify {} ||
+
+	                          cat {}) 2> /dev/null | head -500'
+
+	fi
+}
+
+# Atajos
+## Avanzar (alt+right)
+bindkey "^[[1;3C" forward-word
+## Retroceder (alt+left)
+bindkey "^[[1;3D" backward-word
+## Eliminar bloque adelante (alt+supr)
+bindkey "^[[3;3~" delete-word
 
 # FZF
 source /usr/share/doc/fzf/examples/key-bindings.zsh
@@ -290,21 +337,21 @@ source /usr/share/doc/fzf/examples/completion.zsh
 ```
 {: file='~/.zshrc'}
 
-This means that every time you type `cat` in the terminal, it will run the bat command instead. Similarly, when you type `icat`, it will open the image with kitty.
+Tenemos una función `search` que nos ayudará a previsualizar archivos.
 
-## Last step
+## Último paso
 
-Finally we can close our current terminal and then open our kitty and start customizing our command line, if you want to change the style later you can run:
+Finalmente, y cruzando los dedos, cerramos nuestra terminal actual y abrimos nuestra _Kitty_. Si queremos cambiar el diseño actual de la terminal, podemos ejecutar el siguiente comando.
 
 ```shell
 p10k configure
 ```
 
-If you want to play more in detail, simply edit the .p10k.zsh file.
+Si queremos un nivel más avanzado de personalización, podemos editar el siguiente archivo de configuración.
 
 ```conf
 vim ~/.p10k.zsh
 ```
 {: file='~/.p10k.zsh'}
 
-That's it! Now we have a customizable zshell.
+Eso es todo, ya tenemos una terminal con superpoderes.
