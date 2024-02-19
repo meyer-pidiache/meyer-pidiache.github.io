@@ -1,17 +1,20 @@
 ---
-title: Personalización de la Terminal en Parrot Security 6.0 
+title: Personalización de la Terminal en Parrot Security 6.0
 author: meyer
 date: 2023-04-08 20:04:00 -0500
 categories: [Tutorial]
 tags: [linux, terminal, kitty, parrrot, personalización, zsh, debian]
 pin: true
+image:
+  path: /assets/img/kitty.png
+  width: 1920
+  height: 1080
+  alt: Kitty terminal
 ---
 
 En este artículo veremos cómo personalizar una terminal en linux, específicamente en aquellas distribuciones basadas en Debian como Parrot Security 6.0. Sin tanto preámbulo, empecemos.
 > Cualquier error que presente, lo puede dejar en la sección de comentarios.
 {: .prompt-warning }
-
-![Kitty](/assets/img/kitty.png)
 
 ## Tipografía como requisito
 

@@ -4,6 +4,11 @@ author: michell
 date: 2023-11-19 19:25:00 -0500
 categories: [Cuento]
 tags: [fantasía, amistad]
+image:
+    path: https://th.bing.com/th/id/OIG3.y0Icr.r6mdC7zVi_6PtU?pid=ImgGn
+    width: 455
+    height: 455
+    alt: Leticia
 ---
 
 En una ciudad caótica, llena de misterio y melancolía vivía una joven llamada Leticia quien, desde que tiene conocimiento, sentía una extraña conexión entre los sueños y las historias ocultas en las páginas de los libros. Sus ojos profundos reflejaban un universo de emociones que pocos podían comprender.
@@ -25,4 +30,3 @@ Con el tiempo el parque se convirtió en un punto de encuentro de las personas q
 No obstante, Leticia sabía que su don tenía límites y que ella no podía controlar todos los hilos del destino. Ella aprendió a aceptar que las personas deben encontrar su propio camino, y que su papel no era cambiar el destino de otros, pero junto con Alexei podían ser un faro de luz que guiaba almas perdidas. Con el paso del tiempo, Leticia y Alexei se dieron cuenta que su amistad era obra del destino, los había unido para recordarles que la vida era un tejido de luz y oscuridad que los convirtió en un instrumento para ayudar personas afligidas por el caos y la melancolía, devolviéndoles un rayo de esperanza.
 
 Y así entre hilos del destino y versos poéticos, Leticia y Alexei vivieron una historia de amistad y descubrimiento que creaba un portal de poesía para almas perdidas.
-
