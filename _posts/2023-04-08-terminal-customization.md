@@ -101,7 +101,7 @@ Con el archivo ya creado, lo que tendremos que hacer ahora es editarlo con las c
 enable_audio_bell no
 
 # Establecemos la tipografía que vamos a usar
-font_family MesloLGS NF Regular
+font_family Hack Nerd Font
 font_size 14
 url_color #61afef
 

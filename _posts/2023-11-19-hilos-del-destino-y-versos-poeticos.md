@@ -5,7 +5,7 @@ date: 2023-11-19 19:25:00 -0500
 categories: [Cuento]
 tags: [fantasía, amistad]
 image:
-    path: https://th.bing.com/th/id/OIG3.y0Icr.r6mdC7zVi_6PtU?pid=ImgGn
+    path: /assets/img/hilos_del_destino.jpg
     width: 455
     height: 455
     alt: Leticia
