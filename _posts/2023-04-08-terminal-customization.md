@@ -1,5 +1,5 @@
 ---
-title: Personalización de la Terminal en Parrot Security 6.0
+title: Personalización de la Terminal en Linux
 author: meyer
 date: 2023-04-08 20:04:00 -0500
 categories: [Tutorial]
