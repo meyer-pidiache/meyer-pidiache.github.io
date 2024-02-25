@@ -21,7 +21,7 @@ timezone: America/Bogota
 
 title: Meyer Pidiache                          # the main title
 
-tagline: Artículos de interés   # it will display as the sub-title
+tagline: Desarrollador de Software   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Orgullosamente Colombiano Sumercé
