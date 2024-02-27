@@ -2,8 +2,8 @@
 title: Personalización de la Terminal en Linux
 author: meyer
 date: 2023-04-08 20:04:00 -0500
-categories: [Tutorial]
-tags: [linux, terminal, kitty, parrrot, personalización, zsh, debian]
+categories: [Tutorial, Linux]
+tags: [linux, terminal, kitty, debian, parrrot, arch, manjaro, personalización, zsh, debian, ia]
 pin: true
 image:
   path: /assets/img/kitty.png
@@ -318,7 +318,6 @@ _Instalación de NvChad_
 > Si no hemos presionado la tecla de escape, se nos mostrará un mensaje exitoso, pero si la hemos presionado, podemos esperar un momento a que se instalen los plugins y salir con `!q`.
 {: .prompt-info }
 ⁪
-
 ### Configuración
 
 Ahora que tenemos nuevas herramientas, configurémoslas y creemos algunos alias.
@@ -420,4 +419,10 @@ vim ~/.p10k.zsh
 ```
 {: file='~/.p10k.zsh'}
 
-Eso es todo, ya tenemos una terminal con superpoderes... Pero no con IA, en un próximo artículo mostraré como integrar un asistente de código a nuestro NvChad.
+Eso es todo, ya tenemos una terminal con superpoderes... Pero no con IA.
+
+## Pequeño regalo
+
+Si queremos integrar un asistente de código a nuestro _nvim_, podemos instalar un plugin llamado [Codeium](https://github.com/Exafunction/codeium.vim) que es una buena alternativa a Github Copilot.
+
+{% include embed/youtube.html id='L6SJyDMTt4Y' %}
