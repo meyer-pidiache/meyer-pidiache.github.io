@@ -3,7 +3,7 @@ title: Personalización de la Terminal en Linux
 author: meyer
 date: 2023-04-08 20:04:00 -0500
 categories: [Tutorial, Linux]
-tags: [linux, terminal, kitty, debian, parrrot, arch, manjaro, personalización, zsh, debian, ia]
+tags: [linux, terminal, kitty, debian, parrrot, arch, manjaro, personalización, zsh, debian]
 pin: true
 image:
   path: /assets/img/kitty.png
@@ -423,6 +423,4 @@ Eso es todo, ya tenemos una terminal con superpoderes... Pero no con IA.
 
 ## Pequeño regalo
 
-Si queremos integrar un asistente de código a nuestro _nvim_, podemos instalar un plugin llamado [Codeium](https://github.com/Exafunction/codeium.vim) que es una buena alternativa a Github Copilot.
-
-{% include embed/youtube.html id='L6SJyDMTt4Y' %}
+Si queremos integrar un asistente de código a nuestro _nvim_, podemos instalar un plugin llamado [Codeium](https://github.com/Exafunction/codeium.vim). Para su instalación y configuración, tengo en este sitio web un [artículo](https://meyer-pidiache.github.io/posts/nvchad-with-codeium) sobre ello.
