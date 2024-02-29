@@ -298,6 +298,7 @@ sudo pacman -S lsd
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux64.tar.gz
+export PATH="$PATH:/opt/nvim-linux64/bin"
 rm nvim-linux64.tar.gz
 # Arch
 sudo pacman -S neovim
@@ -324,11 +325,13 @@ Ahora que tenemos nuevas herramientas, configurémoslas y creemos algunos alias.
 
 ```conf
 # [...]
-export PATH="$PATH:/opt/nvim-linux64/bin"
+
+# Descomenta para Debian
+## export PATH="$PATH:/opt/nvim-linux64/bin"
 
 # alias cat='batcat' # Descomenta para Debian
 # alias cat='bat' # Descomenta para Arch 
-alias icat='kitty +kitten icat' # Para mostrar imágenes por consola
+alias icat='kitty +kitten icat' # Para mostrar imágenes por consola, se necesita Image Magick
 alias vim='nvim'
 # lsd
 alias l='lsd --group-dirs=first'
