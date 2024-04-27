@@ -7,6 +7,7 @@
 !.commitlintrc.json
 !.versionrc.json
 !.stylelintrc.json
+!.well-known/
 
 # bundler cache
 _site
