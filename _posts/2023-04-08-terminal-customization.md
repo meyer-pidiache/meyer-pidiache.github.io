@@ -4,7 +4,6 @@ author: meyer
 date: 2023-04-08 20:04:00 -0500
 categories: [Tutorial, Linux]
 tags: [linux, terminal, kitty, debian, parrrot, arch, manjaro, personalización, zsh, debian]
-pin: true
 image:
   path: /assets/img/kitty.png
   width: 1920
