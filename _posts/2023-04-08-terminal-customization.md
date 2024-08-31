@@ -2,6 +2,7 @@
 title: Personalización de la Terminal en Linux
 author: meyer
 date: 2023-04-08 20:04:00 -0500
+comments: true
 categories: [Tutorial, Linux]
 tags: [linux, terminal, kitty, debian, parrrot, arch, manjaro, personalización, zsh, debian]
 image:
