@@ -1,0 +1,49 @@
+---
+title: Validación del _Referer_ en Sitios de Streaming
+author: meyer
+date: 2024-09-06 22:00:00 -0500
+categories: [Cybersecurity]
+tags: [referer-policy, streaming]
+---
+
+## Introducción
+
+En el ámbito de la seguridad web, la correcta implementación y validación del encabezado `Referer` es clave, especialmente en plataformas de streaming que manejan contenido comercial. 
+
+Un caso específico que ilustra esta vulnerabilidad es el de un sitio de _streaming_ de un canal de televisión en vivo que no gestiona adecuadamente esta política, permitiendo que se realice un _bypass_ a la medida de seguridad contra orígenes no autorizados.
+
+## Prueba del Concepto
+
+Al observar en detalle cómo responde el servidor a diversas peticiones de recursos desde diferentes orígenes, se puede evidenciar que, en algunos casos, con solo deshabilitar la propiedad `referrerpolicy` para no enviar ese encabezado, es posible eludir esta capa de seguridad.
+
+```html
+<iframe
+  id="MediaStreamVideoPlayer-ff93cb7a457854f6c89abae3595a80ca4"
+  loading="lazy"
+  title="MediaStream embedded video player"
+  data-src="https://mdstrm.com/live-stream/574463697b9817cf0886fc17?enablejsapi=1&amp;autoplay=true&amp;muted=1&amp;starttime=0"
+  src="https://mdstrm.com/live-stream/574463697b9817cf0886fc17?enablejsapi=1&amp; autoplay=true"
+  allow="autoplay; encrypted-media"
+  data-lazy-load="true"
+  allowfullscreen=""
+  referrerpolicy="no-referrer" <!-- bypass -->
+></iframe>
+```
+
+A la fecha de esta publicación, el ejemplo completo se puede encontrar en ![referer-policy bypass](https://caracoltv.surge.sh/).
+
+## Problema
+
+Sin el _Referer_, el servidor no puede verificar la fuente de la solicitud. Esto permite que sitios no autorizados puedan incrustar el contenido del streaming sin restricciones.
+
+## Mejores Prácticas
+
+Para mitigar estos riesgos, es fundamental:
+
+- **Establecer Políticas de Referencia Claras**: En lugar de utilizar `no-referrer`, se podrían considerar políticas como `same-origin` o `strict-origin`, que permiten el envío del _Referer_ solo en solicitudes que provienen de orígenes confiables.
+
+- **Validar el Referer en el Servidor**: Implementar validaciones en el servidor para asegurarse de que las solicitudes provienen de fuentes autorizadas. Esto puede incluir verificar el encabezado _Referer_ y rechazar solicitudes que no cumplan con los criterios establecidos.
+
+## Nota
+
+Este artículo tiene fines educativos y no fomenta el uso indebido de las vulnerabilidades descritas. No me hago responsable por el uso que terceros puedan darle a esta información.
