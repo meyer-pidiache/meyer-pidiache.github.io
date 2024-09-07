@@ -1,5 +1,5 @@
 ---
-title: Validación del _Referer_ en Sitios de Streaming
+title: Validación del Referer en Sitios de Streaming
 author: meyer
 date: 2024-09-06 22:00:00 -0500
 categories: [Cybersecurity]
@@ -30,7 +30,7 @@ Al observar en detalle cómo responde el servidor a diversas peticiones de recur
 ></iframe>
 ```
 
-A la fecha de esta publicación, el ejemplo completo se puede encontrar en ![referer-policy bypass](https://caracoltv.surge.sh/).
+A la fecha de esta publicación, el ejemplo completo se puede encontrar en [referer-policy bypass](https://caracoltv.surge.sh/){:target="\_blank"}.
 
 ## Problema
 
