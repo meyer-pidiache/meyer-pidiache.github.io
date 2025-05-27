@@ -80,115 +80,114 @@ Sin embargo, los usuarios deben ser conscientes de las limitaciones y controvers
 
 Para la mayoría de usuarios, especialmente aquellos que buscan mejorar su seguridad DNS sin la complejidad de soluciones auto-hospedadas, NextDNS ofrece un nivel de protección considerable que supera significativamente el uso de servicios DNS predeterminados del ISP o proveedores comerciales orientados a la recolección de datos. La recomendación es utilizar NextDNS como parte de una estrategia de seguridad más amplia que incluya otras medidas como software antivirus actualizado, navegadores seguros y, para usuarios con mayores necesidades de privacidad, herramientas adicionales como VPNs de confianza.
 
-## Fuentes
+## Referencias
 
-[^1]: https://nextdns.io
+[^1]: <a href="https://nextdns.io" target="_blank" rel="noopener">https://nextdns.io</a>
 
-[^2]: https://vpnreviewer.com/nextdns-review
+[^2]: <a href="https://vpnreviewer.com/nextdns-review" target="_blank" rel="noopener">https://vpnreviewer.com/nextdns-review</a>
 
-[^3]: https://www.reddit.com/r/nextdns/comments/ju2hfw/nextdns_privacy_policy_change_now_allows_them_to/
+[^3]: <a href="https://www.reddit.com/r/nextdns/comments/ju2hfw/nextdns_privacy_policy_change_now_allows_them_to/" target="_blank" rel="noopener">https://www.reddit.com/r/nextdns/comments/ju2hfw/nextdns_privacy_policy_change_now_allows_them_to/</a>
 
-[^4]: https://help.nextdns.io/t/60yqm2w/bind9-using-encrypted-dns
+[^4]: <a href="https://help.nextdns.io/t/60yqm2w/bind9-using-encrypted-dns" target="_blank" rel="noopener">https://help.nextdns.io/t/60yqm2w/bind9-using-encrypted-dns</a>
 
-[^5]: https://burp.es/privacidad-en-los-dns-nextdns/
+[^5]: <a href="https://burp.es/privacidad-en-los-dns-nextdns/" target="_blank" rel="noopener">https://burp.es/privacidad-en-los-dns-nextdns/</a>
 
-[^6]: https://www.qnapclub.es/showthread.php?tid=3977
+[^6]: <a href="https://www.qnapclub.es/showthread.php?tid=3977" target="_blank" rel="noopener">https://www.qnapclub.es/showthread.php?tid=3977</a>
 
-[^7]: https://news.ycombinator.com/item?id=25070699
+[^7]: <a href="https://news.ycombinator.com/item?id=25070699" target="_blank" rel="noopener">https://news.ycombinator.com/item?id=25070699</a>
 
-[^8]: https://help.nextdns.io/t/35h5jl2/improve-security-and-privacy-by-switching-from-personalized-to-generic-subdomain
+[^8]: <a href="https://help.nextdns.io/t/35h5jl2/improve-security-and-privacy-by-switching-from-personalized-to-generic-subdomain" target="_blank" rel="noopener">https://help.nextdns.io/t/35h5jl2/improve-security-and-privacy-by-switching-from-personalized-to-generic-subdomain</a>
 
-[^9]: https://help.nextdns.io/t/m1hskqp/how-secure-does-nextdns-treat-its-root-ca-secrets-internally
+[^9]: <a href="https://help.nextdns.io/t/m1hskqp/how-secure-does-nextdns-treat-its-root-ca-secrets-internally" target="_blank" rel="noopener">https://help.nextdns.io/t/m1hskqp/how-secure-does-nextdns-treat-its-root-ca-secrets-internally</a>
 
-[^10]: https://help.nextdns.io/t/x2yz4tm/its-time-for-nextdns-to-implement-odoh
+[^10]: <a href="https://help.nextdns.io/t/x2yz4tm/its-time-for-nextdns-to-implement-odoh" target="_blank" rel="noopener">https://help.nextdns.io/t/x2yz4tm/its-time-for-nextdns-to-implement-odoh</a>
 
-[^11]: https://help.nextdns.io/t/x2hc1k8/mozilla-contractual-obligations-in-relation-to-public-nextdns
+[^11]: <a href="https://help.nextdns.io/t/x2hc1k8/mozilla-contractual-obligations-in-relation-to-public-nextdns" target="_blank" rel="noopener">https://help.nextdns.io/t/x2hc1k8/mozilla-contractual-obligations-in-relation-to-public-nextdns</a>
 
-[^12]: https://www.redeszone.net/tutoriales/seguridad/nextdns-cortafuegos-protege-amenazas-internet/
+[^12]: <a href="https://www.redeszone.net/tutoriales/seguridad/nextdns-cortafuegos-protege-amenazas-internet/" target="_blank" rel="noopener">https://www.redeszone.net/tutoriales/seguridad/nextdns-cortafuegos-protege-amenazas-internet/</a>
 
-[^13]: https://www.cndltd.com/blog-mobile/technical-blog/review-nextdns-privacy-security-splunk?tmpl=component\&print=1\&format=print
+[^13]: <a href="https://www.cndltd.com/blog-mobile/technical-blog/review-nextdns-privacy-security-splunk?tmpl=component\&print=1\&format=print" target="_blank" rel="noopener">https://www.cndltd.com/blog-mobile/technical-blog/review-nextdns-privacy-security-splunk?tmpl=component\&print=1\&format=print</a>
 
-[^14]: https://www.youtube.com/watch?v=0xkGeqb07Cg
+[^14]: <a href="https://www.youtube.com/watch?v=0xkGeqb07Cg" target="_blank" rel="noopener">https://www.youtube.com/watch?v=0xkGeqb07Cg</a>
 
-[^15]: https://ciroapp.com/es/nextdns-review/
+[^15]: <a href="https://ciroapp.com/es/nextdns-review/" target="_blank" rel="noopener">https://ciroapp.com/es/nextdns-review/</a>
 
-[^16]: https://help.nextdns.io/t/y4yyn0s/secure-from-cyberattack
+[^16]: <a href="https://help.nextdns.io/t/y4yyn0s/secure-from-cyberattack" target="_blank" rel="noopener">https://help.nextdns.io/t/y4yyn0s/secure-from-cyberattack</a>
 
-[^17]: https://www.reddit.com/r/privacytoolsIO/comments/milkyd/do_you_trust_nextdns/
+[^17]: <a href="https://www.reddit.com/r/privacytoolsIO/comments/milkyd/do_you_trust_nextdns/" target="_blank" rel="noopener">https://www.reddit.com/r/privacytoolsIO/comments/milkyd/do_you_trust_nextdns/</a>
 
-[^18]: https://www.incibe.es/menores/familias/control-parental/nextdns
+[^18]: <a href="https://www.incibe.es/menores/familias/control-parental/nextdns" target="_blank" rel="noopener">https://www.incibe.es/menores/familias/control-parental/nextdns</a>
 
-[^19]: https://nextdns.io/privacy
+[^19]: <a href="https://nextdns.io/privacy" target="_blank" rel="noopener">https://nextdns.io/privacy</a>
 
-[^20]: https://www.youtube.com/watch?v=nGCCqOLK5uE
+[^20]: <a href="https://www.youtube.com/watch?v=nGCCqOLK5uE" target="_blank" rel="noopener">https://www.youtube.com/watch?v=nGCCqOLK5uE</a>
 
-[^21]: https://www.youtube.com/watch?v=18Ihx_K0pVg
+[^21]: <a href="https://www.youtube.com/watch?v=18Ihx_K0pVg" target="_blank" rel="noopener">https://www.youtube.com/watch?v=18Ihx_K0pVg</a>
 
-[^22]: https://www.reddit.com/r/nextdns/comments/xp1a2k/is_using_nextdns_and_a_vpn_good_bad_or_indifferent/?tl=es-es
+[^22]: <a href="https://www.reddit.com/r/nextdns/comments/xp1a2k/is_using_nextdns_and_a_vpn_good_bad_or_indifferent/?tl=es-es" target="_blank" rel="noopener">https://www.reddit.com/r/nextdns/comments/xp1a2k/is_using_nextdns_and_a_vpn_good_bad_or_indifferent/?tl=es-es</a>
 
-[^23]: https://www.reddit.com/r/nextdns/comments/159ppnd/your_honest_opinon_needed_why_did_you_choose_to/?tl=es-es
+[^23]: <a href="https://www.reddit.com/r/nextdns/comments/159ppnd/your_honest_opinon_needed_why_did_you_choose_to/?tl=es-es" target="_blank" rel="noopener">https://www.reddit.com/r/nextdns/comments/159ppnd/your_honest_opinon_needed_why_did_you_choose_to/?tl=es-es</a>
 
-[^24]: https://www.reddit.com/r/nextdns/comments/i9zwxl/nextdns_safety_and_security/?tl=es-es
+[^24]: <a href="https://www.reddit.com/r/nextdns/comments/i9zwxl/nextdns_safety_and_security/?tl=es-es" target="_blank" rel="noopener">https://www.reddit.com/r/nextdns/comments/i9zwxl/nextdns_safety_and_security/?tl=es-es</a>
 
-[^25]: https://play.google.com/store/apps/details?id=com.doubleangels.nextdnsmanagement
+[^25]: <a href="https://play.google.com/store/apps/details?id=com.doubleangels.nextdnsmanagement" target="_blank" rel="noopener">https://play.google.com/store/apps/details?id=com.doubleangels.nextdnsmanagement</a>
 
-[^26]: https://www.reddit.com/r/nextdns/comments/1i0u6u9/is_nextdns_worth_it/?tl=es-es
+[^26]: <a href="https://www.reddit.com/r/nextdns/comments/1i0u6u9/is_nextdns_worth_it/?tl=es-es" target="_blank" rel="noopener">https://www.reddit.com/r/nextdns/comments/1i0u6u9/is_nextdns_worth_it/?tl=es-es</a>
 
-[^27]: https://help.nextdns.io
+[^27]: <a href="https://help.nextdns.io" target="_blank" rel="noopener">https://help.nextdns.io</a>
 
-[^28]: https://www.reddit.com/r/nextdns/comments/14ox7hl/there_is_a_dns_security_vulnerability_dns_address/
+[^28]: <a href="https://www.reddit.com/r/nextdns/comments/14ox7hl/there_is_a_dns_security_vulnerability_dns_address/" target="_blank" rel="noopener">https://www.reddit.com/r/nextdns/comments/14ox7hl/there_is_a_dns_security_vulnerability_dns_address/</a>
 
-[^29]: https://controld.com/blog/dnsfilter-vs-nextdns/
+[^29]: <a href="https://controld.com/blog/dnsfilter-vs-nextdns/" target="_blank" rel="noopener">https://controld.com/blog/dnsfilter-vs-nextdns/</a>
 
-[^30]: https://www.reddit.com/r/firefox/comments/u0qfz3/what_is_nextdns_and_why_do_i_have_it/?tl=es-419
+[^30]: <a href="https://www.reddit.com/r/firefox/comments/u0qfz3/what_is_nextdns_and_why_do_i_have_it/?tl=es-419" target="_blank" rel="noopener">https://www.reddit.com/r/firefox/comments/u0qfz3/what_is_nextdns_and_why_do_i_have_it/?tl=es-419</a>
 
-[^31]: https://help.nextdns.io/category/discussions/?pg=1\&sort=active
+[^31]: <a href="https://help.nextdns.io/category/discussions/?pg=1\&sort=active" target="_blank" rel="noopener">https://help.nextdns.io/category/discussions/?pg=1\&sort=active</a>
 
-[^32]: https://www.reddit.com/r/ISO27001/comments/16ynwec/how_to_answer_this_please_provide_evidence/
+[^32]: <a href="https://www.reddit.com/r/ISO27001/comments/16ynwec/how_to_answer_this_please_provide_evidence/" target="_blank" rel="noopener">https://www.reddit.com/r/ISO27001/comments/16ynwec/how_to_answer_this_please_provide_evidence/</a>
 
-[^33]: https://www.reddit.com/r/InternetBrasil/comments/v1t5rj/nextdns_%C3%A9_bom/
+[^33]: <a href="https://www.reddit.com/r/InternetBrasil/comments/v1t5rj/nextdns_%C3%A9_bom/" target="_blank" rel="noopener">https://www.reddit.com/r/InternetBrasil/comments/v1t5rj/nextdns_%C3%A9_bom/</a>
 
-[^34]: https://www.siteconfiavel.com.br/site/nextdns-com
+[^34]: <a href="https://www.siteconfiavel.com.br/site/nextdns-com" target="_blank" rel="noopener">https://www.siteconfiavel.com.br/site/nextdns-com</a>
 
-[^35]: https://edgeuno.com/es/success-stories/nextdns-reduces-latency-and-increases-quality-of-service-across-latam/
+[^35]: <a href="https://edgeuno.com/es/success-stories/nextdns-reduces-latency-and-increases-quality-of-service-across-latam/" target="_blank" rel="noopener">https://edgeuno.com/es/success-stories/nextdns-reduces-latency-and-increases-quality-of-service-across-latam/</a>
 
-[^36]: https://www.youtube.com/watch?v=K02C1xsB6Ww
+[^36]: <a href="https://www.youtube.com/watch?v=K02C1xsB6Ww" target="_blank" rel="noopener">https://www.youtube.com/watch?v=K02C1xsB6Ww</a>
 
-[^37]: https://jfrog.com/blog/cve-2025-29927-next-js-authorization-bypass/
+[^37]: <a href="https://jfrog.com/blog/cve-2025-29927-next-js-authorization-bypass/" target="_blank" rel="noopener">https://jfrog.com/blog/cve-2025-29927-next-js-authorization-bypass/</a>
 
-[^38]: https://www.cndltd.com/blog-mobile/technical-blog/review-nextdns-privacy-security-splunk
+[^38]: <a href="https://www.cndltd.com/blog-mobile/technical-blog/review-nextdns-privacy-security-splunk" target="_blank" rel="noopener">https://www.cndltd.com/blog-mobile/technical-blog/review-nextdns-privacy-security-splunk</a>
 
-[^39]: https://help.nextdns.io/t/h7hswav/potential-nextdns-securityprivacy-risk-due-to-ds-lite-tunnel-and-linked-ip
+[^39]: <a href="https://help.nextdns.io/t/h7hswav/potential-nextdns-securityprivacy-risk-due-to-ds-lite-tunnel-and-linked-ip" target="_blank" rel="noopener">https://help.nextdns.io/t/h7hswav/potential-nextdns-securityprivacy-risk-due-to-ds-lite-tunnel-and-linked-ip</a>
 
-[^40]: https://help.nextdns.io/t/g9hjacc/enhanced-account-security
+[^40]: <a href="https://help.nextdns.io/t/g9hjacc/enhanced-account-security" target="_blank" rel="noopener">https://help.nextdns.io/t/g9hjacc/enhanced-account-security</a>
 
-[^41]: https://help.nextdns.io/t/q6hwwbg/dnsfilters-problematic-test-tool-that-misrepresents-every-dns-service-including-nextdns
+[^41]: <a href="https://help.nextdns.io/t/q6hwwbg/dnsfilters-problematic-test-tool-that-misrepresents-every-dns-service-including-nextdns" target="_blank" rel="noopener">https://help.nextdns.io/t/q6hwwbg/dnsfilters-problematic-test-tool-that-misrepresents-every-dns-service-including-nextdns</a>
 
-[^42]: https://help.nextdns.io/t/h7ykqth/hipaa-compliance
+[^42]: <a href="https://help.nextdns.io/t/h7ykqth/hipaa-compliance" target="_blank" rel="noopener">https://help.nextdns.io/t/h7ykqth/hipaa-compliance</a>
 
-[^43]: https://help.nextapp.co/en/articles/6781793-soc-2-type-ii
+[^43]: <a href="https://help.nextapp.co/en/articles/6781793-soc-2-type-ii" target="_blank" rel="noopener">https://help.nextapp.co/en/articles/6781793-soc-2-type-ii</a>
 
-[^44]: https://help.nextdns.io/t/q6hw5td/is-there-doc-for-test-nextdns-io
+[^44]: <a href="https://help.nextdns.io/t/q6hw5td/is-there-doc-for-test-nextdns-io" target="_blank" rel="noopener">https://help.nextdns.io/t/q6hw5td/is-there-doc-for-test-nextdns-io</a>
 
-[^45]: https://help.nextdns.io/t/g9hmv0a/how-to-install-and-trust-nextdns-root-ca
+[^45]: <a href="https://help.nextdns.io/t/g9hmv0a/how-to-install-and-trust-nextdns-root-ca" target="_blank" rel="noopener">https://help.nextdns.io/t/g9hmv0a/how-to-install-and-trust-nextdns-root-ca</a>
 
-[^46]: https://help.nextdns.io/t/x2y31df/mozzilla-firefox-help-this-device-is-using-nextdns-with-no-profile-make-sure-you-use-the-dns-over-https-endpoint-shown-below
+[^46]: <a href="https://help.nextdns.io/t/x2y31df/mozzilla-firefox-help-this-device-is-using-nextdns-with-no-profile-make-sure-you-use-the-dns-over-https-endpoint-shown-below" target="_blank" rel="noopener">https://help.nextdns.io/t/x2y31df/mozzilla-firefox-help-this-device-is-using-nextdns-with-no-profile-make-sure-you-use-the-dns-over-https-endpoint-shown-below</a>
 
-[^47]: https://blog.mozilla.org/en/mozilla/firefox-announces-new-partner-in-delivering-private-and-secure-dns-services-to-users/
+[^47]: <a href="https://blog.mozilla.org/en/mozilla/firefox-announces-new-partner-in-delivering-private-and-secure-dns-services-to-users/" target="_blank" rel="noopener">https://blog.mozilla.org/en/mozilla/firefox-announces-new-partner-in-delivering-private-and-secure-dns-services-to-users/</a>
 
-[^48]: https://news.sophos.com/en-us/2019/12/18/mozilla-adds-nextdns-to-list-of-dns-over-https-providers/
+[^48]: <a href="https://news.sophos.com/en-us/2019/12/18/mozilla-adds-nextdns-to-list-of-dns-over-https-providers/" target="_blank" rel="noopener">https://news.sophos.com/en-us/2019/12/18/mozilla-adds-nextdns-to-list-of-dns-over-https-providers/</a>
 
-[^49]: https://bugzilla.mozilla.org/show_bug.cgi?id=1644444
+[^49]: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1644444" target="_blank" rel="noopener">https://bugzilla.mozilla.org/show_bug.cgi?id=1644444</a>
 
-[^50]: https://dev.to/alvarosdev/usando-nextdns-cli-en-tu-red-1o6n
+[^50]: <a href="https://dev.to/alvarosdev/usando-nextdns-cli-en-tu-red-1o6n" target="_blank" rel="noopener">https://dev.to/alvarosdev/usando-nextdns-cli-en-tu-red-1o6n</a>
 
-[^51]: https://www.twingate.com/docs/nextdns-configuration
+[^51]: <a href="https://www.twingate.com/docs/nextdns-configuration" target="_blank" rel="noopener">https://www.twingate.com/docs/nextdns-configuration</a>
 
-[^52]: https://help.nextdns.io/t/m1yfjz3/iso-27001-andor-similar-certifications
+[^52]: <a href="https://help.nextdns.io/t/m1yfjz3/iso-27001-andor-similar-certifications" target="_blank" rel="noopener">https://help.nextdns.io/t/m1yfjz3/iso-27001-andor-similar-certifications</a>
 
-[^53]: https://www.lautenbacher.io/en/general/recommendation-more-security-with-nextdns/
+[^53]: <a href="https://www.lautenbacher.io/en/general/recommendation-more-security-with-nextdns/" target="_blank" rel="noopener">https://www.lautenbacher.io/en/general/recommendation-more-security-with-nextdns/</a>
 
-[^54]: https://www.teamworkims.co.uk/nextens-achieves-iso-27001-certification/
+[^54]: <a href="https://www.teamworkims.co.uk/nextens-achieves-iso-27001-certification/" target="_blank" rel="noopener">https://www.teamworkims.co.uk/nextens-achieves-iso-27001-certification/</a>
 
-[^55]: https://nextdc.com/hubfs/ISO_27001_Certification_Final.pdf
-
+[^55]: <a href="https://nextdc.com/hubfs/ISO_27001_Certification_Final.pdf" target="_blank" rel="noopener">https://nextdc.com/hubfs/ISO_27001_Certification_Final.pdf</a>
