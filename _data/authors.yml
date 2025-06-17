@@ -5,6 +5,9 @@
 #   twitter: {twitter_of_author}
 #   url: {homepage_of_author}
 # -------------------------------------
+josttin:
+  name: Josttin Mendez
+  url: https://github.com/Josttin-Mendez
 
 meyer:
   name: Meyer Pidiache
@@ -17,3 +20,19 @@ michell:
 perplexity:
   name: Perplexity
   url: https://www.perplexity.ai/
+
+santiago:
+  name: Santiago López
+  url: 
+
+sofia:
+  name: Sofía Beltrán
+  url: https://github.com/Sofia-Beltran
+
+steven:
+  name: Steven Balaguera
+  url: 
+
+tomas:
+  name: Tomás Jiménez
+  url:
