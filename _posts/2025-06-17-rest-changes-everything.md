@@ -5,6 +5,9 @@ date: 2025-06-17 11:47:00 -0500
 categories: [Artículo]
 tags: [descanso, salud]
 comments: true
+image:
+  path: /assets/img/rest.jpg
+  alt: Descanso
 ---
 
 ## Qué es descansar y tipos de descanso 
