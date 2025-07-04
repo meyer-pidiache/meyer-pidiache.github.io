@@ -7,6 +7,9 @@ tags: [discusión, ia]
 comments: true
 ---
 
+> Publicado también en [El Pozo Es-Séptico](https://elpozoeseptico.com/escritura-para-desarrolladores-en-la-era-de-la-ia/){:target="_blank"}
+{: .prompt-info }
+
 Hoy en día, en la era de la tecnología y de la inteligencia artificial, ¿qué significa escribir y cómo las habilidades de escritura contribuyen a tu formación profesional?
 
 Pienso que la escritura está en uno de sus puntos de inflexión más grandes, actividades como documentación de software (cosa que a muchos no nos interesa mucho, pero que sí es relevante) está siendo relegada a la IA, ejemplo de esto tenemos a [deepwiki](https://deepwiki.com/) herramienta que permite documentar un proyecto en segundos y adicionalmente permite interactuar con la documentación mediante un chat también con IA. ¿Qué motivación tenemos para mejorar nuestras habilidades de escritura los desarrolladores si la IA ahora puede hacer lo que no nos gusta? La IA no es del todo acertada, pero, ¿nosotros no nos equivocamos también? Sí, nosotros tenemos la capacidad de revisar y refinar... ¡La IA obviamente también!, hay modelos de razonamiento o sencillamente podemos iterar n veces con un clic a velocidades increíbles para obtener el resultado ideal. ¿No está bien usarla? ¿Es poco profesional? La línea ética y valores sociales se corren siempre con el tiempo. ¿Es que estamos en el presente y tenemos herramientas de tipo AI Detector? También las hay de AI Humanizer. Negar que la IA no puede escribir o hacer lo que nosotros hacemos, es como negar las primeras máquinas en la revolución industrial... Es inevitable, como especie humana queremos la eficiencia/dinero, y es justo lo que la IA nos ofrece.
