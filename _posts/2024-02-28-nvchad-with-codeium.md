@@ -49,3 +49,48 @@ Ingresamos a Nvim para que se instale el plugin automáticamente, y cuando termi
 Si queremos ver más información de todo el proceso de instalación, podemos ver el siguiente video el cual nos dará una idea de lo realizado, cabe agregar que hay diferencias notables a lo que hemos hecho.
 
 {% include embed/youtube.html id='L6SJyDMTt4Y' %}
+
+---
+
+## Actualización para LazyVim
+
+Si utilizas [LazyVim](https://www.lazyvim.org/) en lugar de NvChad, el proceso es ligeramente diferente y más estructurado. A continuación se detalla el método recomendado para integrar Codeium.
+
+### 1. Añadir el Plugin y Desactivar Keymaps por Defecto
+
+En LazyVim, cada plugin puede tener su propio archivo de configuración en `lua/plugins/`. Para mantener todo organizado, crea el archivo `lua/plugins/codeium.lua` y desactiva los atajos por defecto.
+
+```lua
+-- lua/plugins/codeium.lua
+return {
+  "Exafunction/codeium.vim",
+  event = "BufEnter",
+  config = function()
+    -- Desactiva los keymaps por defecto para definir los nuestros.
+    vim.g.codeium_disable_bindings = 1
+  end,
+}
+```
+{: file='~/.config/nvim/lua/plugins/codeium.lua'}
+
+### 2. Configurar Keymaps Personalizados
+
+LazyVim centraliza los atajos de teclado en `lua/config/keymaps.lua`. Añade las siguientes líneas a ese archivo para configurar tus atajos personalizados para Codeium:
+
+```lua
+-- lua/config/keymaps.lua
+
+-- (Añadir al final del archivo)
+
+-- Keymaps para Codeium
+vim.keymap.set("i", "<C-g>", function() return vim.fn["codeium#Accept"]() end, { expr = true, silent = true, desc = "Codeium: Aceptar" })
+vim.keymap.set("i", "<C-,>", function() return vim.fn["codeium#CycleCompletions"](1) end, { expr = true, silent = true, desc = "Codeium: Siguiente" })
+vim.keymap.set("i", "<C-.>", function() return vim.fn["codeium#CycleCompletions"](-1) end, { expr = true, silent = true, desc = "Codeium: Anterior" })
+vim.keymap.set("i", "<C-x>", function() return vim.fn["codeium#Clear"]() end, { expr = true, silent = true, desc = "Codeium: Limpiar" })
+vim.keymap.set("n", "<C-i>", function() vim.fn["codeium#Chat"]() end, { silent = true, desc = "Codeium: Chat" })
+```
+{: file='~/.config/nvim/lua/config/keymaps.lua'}
+
+### 3. Autenticación
+
+Al igual que con NvChad, después de reiniciar Nvim, ejecuta `:Codeium Auth` para autenticar tu cuenta y empezar a usar el asistente.
