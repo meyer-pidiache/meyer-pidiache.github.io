@@ -1,12 +1,12 @@
 ---
-title: Instalación de Codeium en Nvim con NvChad
+title: Instalación y personalización de Codeium en Nvim
 author: meyer
 date: 2024-02-28 11:01:00 -0500
 categories: [Tutorial, Linux]
 tags: [linux, terminal, nvim, nvchad, personalización, ia]
 ---
 
-Una mejor alternativa a Github Copilot es [Codeium](https://github.com/Exafunction/codeium.vim), el cual lo podemos integrar con múltiples entornos gráficos de desarrollo. En este artículo trataré la instalación de Codeium como extensión en Nvim configurado con NvChad. A continuación el paso a paso.
+Una alternativa a Github Copilot es [Codeium](https://github.com/Exafunction/codeium.vim), el cual lo podemos integrar con múltiples entornos gráficos de desarrollo. En este artículo trataré la instalación de Codeium como extensión en Nvim configurado con NvChad. A continuación el paso a paso.
 
 ## Primero necesitaremos una cuenta
 
