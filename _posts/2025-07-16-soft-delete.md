@@ -1,11 +1,14 @@
 ---
-title: "Soft Delete: no lo vemos, pero ellos si"
+title: "Soft Delete: no lo vemos, pero ellos sí"
 authors: [meyer]
 date: 2025-07-16 17:19:00 -0500
 categories: [Artículo]
 tags: [ética, información]
 comments: true
 ---
+
+> Publicado también en [El Pozo Es-Séptico](https://elpozoeseptico.com/soft-delete-no-lo-vemos-ellos-si/){:target="_blank"}
+{: .prompt-info }
 
 Cuando nos registramos en un servicio digital, ya sea un sistema operativo, aplicación móvil, sitio web o cualquier cosa conectada a internet, por detrás, fuera de nuestra vista de usuarios normales, los datos están viajando a velocidades alucinantes desde nuestros dispositivos a servidores de terceros y viceversa. Sin que nos percatemos, estamos dejando un rastro digital inmenso en muchos servidores, en serio, ¡muchos!
 
