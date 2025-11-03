@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Nueva app para generar logos de Minecraft server"
+title: Generador de logos para Minecraft Server con IA
+authors: [meyer]
 date: 2025-11-03
+categories: [Herramientas, Tutorial, IA]
+tags: [minecraft, logos, herramientas, inteligencia artificial, google ai studio, servidor]
+comments: true
 ---
 
-¡Estamos emocionados de anunciar el lanzamiento de una nueva aplicación que te permitirá crear logos fácilmente para tu servidor de Minecraft! Con esta app, puedes diseñar tu logo y, al descargar la imagen, ya estará en formato 64x64, guardándose como "minecraft-logo.png". Esto significa que está listo para mover a la raíz de tu servidor Minecraft de inmediato.
+Recientemente he desarrollado una aplicación sencilla para generar logos que se pueden utilizar como íconos en servidores de Minecraft. El objetivo de la app es facilitar la creación y descarga del logo, que ya estará listo en formato 64x64 y se guardará con el nombre "minecraft-logo.png". Así, solo tendrás que moverlo a la raíz de tu servidor Minecraft.
 
-Puedes utilizar la app aquí: [Generador de Logos de Minecraft](https://ai.studio/apps/drive/17ZDsWHh4WjyvdM8tkARXYiUoXrftsZ-E). 
+Para probar la aplicación, simplemente ingresa aquí: [Didaskalia IA - Minecraft Logo Generator](https://ai.studio/apps/drive/17ZDsWHh4WjyvdM8tkARXYiUoXrftsZ-E).
 
-Esta aplicación fue construida con Google AI Studio, una plataforma que facilita la creación de proyectos innovadores. Aprende más sobre Google AI Studio en: [Google AI Studio](https://aistudio.google.com/apps). 
+La herramienta está construida usando Google AI Studio con Nano banana, una plataforma orientada a la experimentación y el desarrollo de soluciones basadas en inteligencia artificial. Puedes conocer más sobre Google AI Studio en: [Google AI Studio](https://aistudio.google.com/apps).
 
-¡No pierdas la oportunidad de dar una nueva apariencia a tu servidor con un logo único!
+Si tienes sugerencias o comentarios sobre la app, puedes compartirlos abajo en esta misma página.
