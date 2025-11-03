@@ -1,7 +1,7 @@
 ---
 title: Generador de logos para Minecraft Server con IA
 authors: [meyer]
-date: 2025-11-03
+date: 2025-11-03 00:00:00 -0500
 categories: [Herramientas, Tutorial, IA]
 tags: [minecraft, logos, herramientas, inteligencia artificial, google ai studio, servidor]
 comments: true
