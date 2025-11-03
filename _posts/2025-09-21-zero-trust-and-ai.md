@@ -23,9 +23,9 @@ Así como los atacantes están usando la IA para fines de hacking no ético, la 
 
 ## Bibliografía
 
-[^1]: [https://learn.microsoft.com/es-mx/security/zero-trust/zero-trust-overview](https://learn.microsoft.com/es-mx/security/zero-trust/zero-trust-overview)
-[^2]: [https://learn.microsoft.com/es-es/entra/standards/memo-22-09-meet-identity-requirements](https://learn.microsoft.com/es-es/entra/standards/memo-22-09-meet-identity-requirements)
-[^3]: [https://cloudsecurityalliance.org/blog/2025/02/27/how-is-ai-strengthening-zero-trust](https://cloudsecurityalliance.org/blog/2025/02/27/how-is-ai-strengthening-zero-trust)
-[^4]: [https://doi.org/10.30574/wjarr.2024.24.3.3883](https://doi.org/10.30574/wjarr.2024.24.3.3883)
-[^5]: [https://blog.cloudflare.com/making-waf-ai-models-go-brr/](https://blog.cloudflare.com/making-waf-ai-models-go-brr/)
-[^6]: [https://blog.cloudflare.com/how-cloudflares-ai-waf-proactively-detected-ivanti-connect-secure-critical-zero-day-vulnerability/](https://blog.cloudflare.com/how-cloudflares-ai-waf-proactively-detected-ivanti-connect-secure-critical-zero-day-vulnerability/)
+[^1]: [https://learn.microsoft.com/es-mx/security/zero-trust/zero-trust-overview](https://learn.microsoft.com/es-mx/security/zero-trust/zero-trust-overview){:target="\_blank"}
+[^2]: [https://learn.microsoft.com/es-es/entra/standards/memo-22-09-meet-identity-requirements](https://learn.microsoft.com/es-es/entra/standards/memo-22-09-meet-identity-requirements){:target="\_blank"}
+[^3]: [https://cloudsecurityalliance.org/blog/2025/02/27/how-is-ai-strengthening-zero-trust](https://cloudsecurityalliance.org/blog/2025/02/27/how-is-ai-strengthening-zero-trust){:target="\_blank"}
+[^4]: [https://doi.org/10.30574/wjarr.2024.24.3.3883](https://doi.org/10.30574/wjarr.2024.24.3.3883){:target="\_blank"}
+[^5]: [https://blog.cloudflare.com/making-waf-ai-models-go-brr/](https://blog.cloudflare.com/making-waf-ai-models-go-brr/){:target="\_blank"}
+[^6]: [https://blog.cloudflare.com/how-cloudflares-ai-waf-proactively-detected-ivanti-connect-secure-critical-zero-day-vulnerability/](https://blog.cloudflare.com/how-cloudflares-ai-waf-proactively-detected-ivanti-connect-secure-critical-zero-day-vulnerability/){:target="\_blank"}
