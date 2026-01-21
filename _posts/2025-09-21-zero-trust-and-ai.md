@@ -5,6 +5,7 @@ date: 2025-09-21 20:15:00 -0500
 categories: [Artículo]
 tags: [zero-trust, ia, seguridad, red, firewall]
 comments: true
+pin: true
 ---
 
 Zero Trust o Zero Trust Architecture (ZTA) es una estrategia de seguridad con ciertos principios: verificar de forma explícita, utilizar el acceso con menos privilegios y asunción de que hay brechas (vulnerabilidades). En lugar de confiar en el firewall que se esté usando, se comprueba todas las solicitudes independientemente del origen, es decir, cero confianza[^1].
