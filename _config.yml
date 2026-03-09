@@ -24,7 +24,7 @@ title: Meyer Pidiache                          # the main title
 tagline: Desarrollador de Software   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  Orgullosamente Colombiano Sumercé
+  Blog sobre software, filosofía y más.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://meyer-pidiache.github.io'
@@ -39,10 +39,10 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Meyer Pidiache
-  email: meyer.pidiache@gmail.com             # change to your email address
+  email: pidiache@duck.com
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/Meyer_Pidiache      # change to your twitter homepage
+    # - https://twitter.com/Meyer_Pidiache      # change to your twitter homepage
     - https://github.com/meyer-pidiache       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
@@ -54,8 +54,14 @@ google_site_verification:               # fill in to your verification string
 # The end of `jekyll-seo-tag` settings
 
 analytics:
-  google: 
-    id: 'G-CEBDK402JN'                 # fill in your Google Analytics ID
+  google:
+    id: # fill in your Google Analytics ID
+  cloudflare:
+    id: 'f18c0b8df7cc4aaf8d43bb7e060b1f68' # fill in your Cloudflare Web Analytics token
+
+# Page views settings
+pageviews:
+  provider: # now only supports 'goatcounter'
 
 # Prefer color scheme setting.
 #
@@ -103,9 +109,6 @@ comments:
     lang:              # optional, default to the value of `site.lang`
     reactions_enabled: # optional, default to the value of `1`
 
-include:
-  - .well-known
-
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
@@ -115,7 +118,14 @@ assets:
     env:          # [development|production]
 
 pwa:
-  enabled: true   # the option for PWA feature
+  enabled: true # The option for PWA feature (installable)
+  cache:
+    enabled: true # The option for PWA offline cache
+    # Paths defined here will be excluded from the PWA cache.
+    # Usually its value is the `baseurl` of another website that
+    # shares the same domain name as the current website.
+    deny_paths:
+      # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
 paginate: 10
 
