@@ -1,14 +1,11 @@
 ---
-title: Privacidad y seguridad, detrás de un monstruo invisible 
+title: Privacidad y seguridad, detrás de un monstruo invisible
 authors: [meyer]
 date: 2025-07-04 11:37:00 -0500
 categories: [Artículo]
 tags: [privacidad, seguridad, dns]
 comments: true
 ---
-
-> Publicado también en [El Pozo Es-Séptico](https://elpozoeseptico.com/privacidad-y-seguridad-detras-de-un-monstruo-invisible/){:target="_blank"}
-{: .prompt-info }
 
 En la industria del software, recopilar datos es el pan de cada día, la fachada inocente que nos muestran ha sido los datos de telemetría, para la mejora de la experiencia de usuario al usar los servicios que nos ofrecen, ello bajo los términos y condiciones que aceptamos sin leer, cada vez que nos registramos en un sitio nuevo. Nadie está exento de esto, desde que empezamos a usar un sistema operativo, ya sea Windows, MacOS, algunas distribuciones de Linux, Android o iOS, etc., estamos compartiendo todo lo que el software puede recopilar bajo las leyes establecidas, leyes que no están a la par del avance del mundo de la informática.
 

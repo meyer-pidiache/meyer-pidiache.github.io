@@ -7,9 +7,6 @@ tags: [ética, información]
 comments: true
 ---
 
-> Publicado también en [El Pozo Es-Séptico](https://elpozoeseptico.com/soft-delete-no-lo-vemos-ellos-si/){:target="_blank"}
-{: .prompt-info }
-
 Cuando nos registramos en un servicio digital, ya sea un sistema operativo, aplicación móvil, sitio web o cualquier cosa conectada a internet, por detrás, fuera de nuestra vista de usuarios normales, los datos están viajando a velocidades alucinantes desde nuestros dispositivos a servidores de terceros y viceversa. Sin que nos percatemos, estamos dejando un rastro digital inmenso en muchos servidores, en serio, ¡muchos!
 
 Y muchos de ellos siguen los estándares del software comercial, como lo es el _soft-delete_, nombre técnico usado para eliminar información de los usuarios, pero manteniéndola en servidores privados; es decir, el usuario ve que su información ha sido eliminada con éxito, pero esta sigue estando en los servidores del servicio que se esté usando.
