@@ -13,6 +13,7 @@ Las alertas de batería baja en algunos entornos de escritorios Linux no son muy
 ## Requisitos
 
 Para que funcione esta alerta personalizada, asegúrese de:
+
 - Tener `zenity` instalado.
 - Verificar que la variable `BATTERY_PATH` en el código coincida con su sistema operativo.
 
@@ -66,6 +67,7 @@ while check_battery; do
            --text="Conecta el cargador" \
 done
 ```
+
 {: file='/usr/local/bin/battery_monitor.sh'}
 
 ### Crontab
@@ -81,6 +83,7 @@ Para luego agregar esta línea al final del archivo que se está editando:
 ```conf
 */1 * * * * /usr/local/bin/battery_monitor.sh
 ```
+
 {: file='crontab -e'}
 
 ### Resumen
