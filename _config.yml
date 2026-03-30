@@ -21,7 +21,7 @@ timezone: America/Bogota
 
 title: Meyer Pidiache                          # the main title
 
-tagline: Desarrollador de Software   # it will display as the sub-title
+tagline: Bitácora   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Blog sobre software, filosofía y más.
