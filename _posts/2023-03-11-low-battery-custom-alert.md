@@ -63,8 +63,8 @@ check_battery() {
 
 while check_battery; do
     zenity --warning \
-           --title="¡Batería Baja\!" \
-           --text="Conecta el cargador" \
+           --title="¡Batería Baja!" \
+           --text="Conecta el cargador"
 done
 ```
 
