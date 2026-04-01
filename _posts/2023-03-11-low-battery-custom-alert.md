@@ -94,6 +94,9 @@ Para luego agregar esta línea al final del archivo que se está editando:
 
 {: file='crontab -e'}
 
+> Algunas actualizaciones del sistema pueden eliminar (sobrescribir) estos trabajos programados, así que es ideal revisarlos después de actualizar.
+{: .prompt-info }
+
 ### Resumen
 
 La tarea programada con Crontab ejecutará el archivo bash cada minuto, y este verificará el estado de la batería, si es menor o igual a 20% (BATTERY_THRESHOLD), se mostrará la alerta. **Si decide cerrar la alerta, esta se volverá a mostrar** hasta que el estado de batería se diferente a descarga, es decir, cuando haya puesto a cargar su dispositivo.
