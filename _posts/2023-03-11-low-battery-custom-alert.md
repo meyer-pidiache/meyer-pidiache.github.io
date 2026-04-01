@@ -51,7 +51,14 @@ Luego, copia y pega en este el siguiente contenido.
 BATTERY_THRESHOLD=20
 BATTERY_PATH="/sys/class/power_supply/BAT0"
 
+USER_ID=$(id -u $(whoami))
+export DISPLAY=:0
+export XDG_RUNTIME_DIR=/run/user/$USER_ID
+export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$USER_ID/bus
+
 check_battery() {
+    if [ ! -d "$BATTERY_PATH" ]; then return 1; fi
+
     BATTERY_LEVEL=$(cat "$BATTERY_PATH/capacity")
     STATUS=$(cat "$BATTERY_PATH/status")
 
@@ -65,6 +72,7 @@ while check_battery; do
     zenity --warning \
            --title="¡Batería Baja!" \
            --text="Conecta el cargador"
+    sleep 1
 done
 ```
 
