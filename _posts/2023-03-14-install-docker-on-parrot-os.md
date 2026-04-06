@@ -58,7 +58,7 @@ Una vez configurada la clave GPG, se agrega el repositorio a las fuentes de apt.
 sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
 Types: deb
 URIs: https://download.docker.com/linux/debian
-Suites: $(. /etc/os-release && echo "$VERSION_CODENAME")
+Suites: trixie
 Components: stable
 Architectures: $(dpkg --print-architecture)
 Signed-By: /etc/apt/keyrings/docker.asc
@@ -67,7 +67,7 @@ EOF
 sudo apt update
 ```
 
-> En Parrot OS, la variable `VERSION_CODENAME` reportada por el sistema no corresponde a una versión de Debian soportada por Docker. Por esta razón, es necesario sustituir manualmente el _codename_ según la tabla de versiones proporcionada.
+> Verifica que `trixie` coincida con tu _codename_, de lo contrario reemplaza con el tuyo basado en la tabla proporcionada.
 {: .prompt-warning }
 
 ### Instalación de Docker Engine
