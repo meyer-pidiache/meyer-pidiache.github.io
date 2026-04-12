@@ -55,6 +55,7 @@ USER_ID=$(id -u $(whoami))
 export DISPLAY=:0
 export XDG_RUNTIME_DIR=/run/user/$USER_ID
 export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$USER_ID/bus
+export LANG=$(locale -a | grep -i "utf" | head -1)
 
 check_battery() {
     if [ ! -d "$BATTERY_PATH" ]; then return 1; fi
