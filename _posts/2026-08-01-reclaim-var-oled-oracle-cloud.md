@@ -1,7 +1,7 @@
 ---
 title: "Recuperar espacio en un VPS de Oracle Cloud: logrotate y reclaim de /var/oled"
 authors: [meyer]
-date: 2026-08-01 18:45:00 -0500
+date: 2026-08-01 14:15:00 -0500
 categories: [Tutorial, Linux]
 tags: [oracle cloud, linux, lvm, logrotate, kdump, vps]
 comments: true
@@ -37,7 +37,7 @@ En la práctica, un VPS normal usa unos **300 MB** de ese volumen: los ~14 GB re
 Esta guía reduce `/var/oled` de 15 GB a 1 GB. Antes de ejecutarla, ten en cuenta lo siguiente:
 
 - **La operación es irreversible para oled.** XFS no se puede achicar en caliente: una vez que el espacio se le da a root, no se puede volver a agrandar `/var/oled` sin reformatear root [^5].
-- **El volume group debe tener espacio libre.** En estas imágenes el VG `ocivolume` suele venir al 100% (`VFree 0`), por lo que *no* es posible simplemente "agrandar" oled de 1 GB a 2 GB: habría que quitarle espacio a root, y XFS no lo permite. Si necesitas más espacio para oled, la vía es ampliar el boot volume desde la consola de OCI y usar `oci-growfs` [^6][^7].
+- **El volume group debe tener espacio libre.** En estas imágenes el VG `ocivolume` suele venir al 100% (`VFree 0`), por lo que _no_ es posible simplemente "agrandar" oled de 1 GB a 2 GB: habría que quitarle espacio a root, y XFS no lo permite. Si necesitas más espacio para oled, la vía es ampliar el boot volume desde la consola de OCI y usar `oci-growfs` [^6][^7].
 - **kdump necesita espacio.** Un vmcore de un sistema de 10 GB de RAM puede acercarse a 1-2 GB incluso comprimido con `makedumpfile -d 31`. Por eso esta guía apunta kdump a `/var/crash` (root), donde hay decenas de GB libres [^2].
 - **SELinux está en `Enforcing`** en Oracle Linux: hay que restaurar los contextos con `restorecon`, o los daemons PCP arrancan con contexto roto.
 - **Los daemons PCP deben estar detenidos** antes de desmontar el volumen, o `umount` falla por archivos abiertos.
