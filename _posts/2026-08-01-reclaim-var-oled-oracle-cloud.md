@@ -1,5 +1,5 @@
 ---
-title: Recuperar espacio en un VPS de Oracle Cloud: logrotate y reclaim de /var/oled
+title: "Recuperar espacio en un VPS de Oracle Cloud: logrotate y reclaim de /var/oled"
 authors: [meyer]
 date: 2026-08-01 18:45:00 -0500
 categories: [Tutorial, Linux]
